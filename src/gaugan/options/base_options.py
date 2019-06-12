@@ -6,7 +6,7 @@ Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses
 import sys
 import argparse
 import os
-from util import util
+from gaugan.util import util
 import torch
 import models
 import data
