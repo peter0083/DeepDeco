@@ -8,8 +8,8 @@ import argparse
 import os
 from gaugan.util import util
 import torch
-import models
-import data
+import gaugan.models
+import gaugan.data
 import pickle
 
 
