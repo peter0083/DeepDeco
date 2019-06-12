@@ -8,7 +8,7 @@ import argparse
 import os
 from gaugan.util import util
 import torch
-import gaugan.models
+import gaugan.models as gaugan_models
 import gaugan.data
 import pickle
 
@@ -81,7 +81,7 @@ class BaseOptions():
 
         # modify model-related parser options
         model_name = opt.model
-        model_option_setter = models.get_option_setter(model_name)
+        model_option_setter = gaugan_models.get_option_setter(model_name)
         parser = model_option_setter(parser, self.isTrain)
 
         # modify dataset-related parser options
