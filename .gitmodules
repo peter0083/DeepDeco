@@ -1,0 +1,3 @@
+[submodule "src/gaugan/models/networks/Synchronized-BatchNorm-PyTorch"]
+	path = src/gaugan/models/networks/Synchronized-BatchNorm-PyTorch
+	url = https://github.com/vacancy/Synchronized-BatchNorm-PyTorch.git
