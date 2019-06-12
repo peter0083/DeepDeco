@@ -7,8 +7,8 @@ import sys
 from collections import OrderedDict
 from gaugan.options.train_options import TrainOptions
 import gaugan.data
-from util.iter_counter import IterationCounter
-from util.visualizer import Visualizer
+from gaugan.util.iter_counter import IterationCounter
+from gaugan.util.visualizer import Visualizer
 from trainers.pix2pix_trainer import Pix2PixTrainer
 
 # parse options
