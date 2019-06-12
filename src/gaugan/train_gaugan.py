@@ -9,7 +9,7 @@ from gaugan.options.train_options import TrainOptions
 import gaugan.data
 from gaugan.util.iter_counter import IterationCounter
 from gaugan.util.visualizer import Visualizer
-from trainers.pix2pix_trainer import Pix2PixTrainer
+from gaugan.trainers.pix2pix_trainer import Pix2PixTrainer
 
 # parse options
 opt = TrainOptions().parse()
