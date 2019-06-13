@@ -12,7 +12,7 @@ from PIL import Image
 import os
 import argparse
 import dill as pickle
-import coco
+import util.coco
 
 
 def save_obj(obj, name):
@@ -48,7 +48,7 @@ def tile_images(imgs, picturesPerRow=4):
     else:
         rowPadding = picturesPerRow - imgs.shape[0] % picturesPerRow
     if rowPadding > 0:
-        imgs = np.concatenate([imgs, np.zeros((rowPadding, imgs.shape[1:]), dtype=imgs.dtype)], axis=0)
+        imgs = np.concatenate([imgs, np.zeros((rowPadding, *imgs.shape[1:]), dtype=imgs.dtype)], axis=0)
 
     # Tiling Loop (The conditionals are not necessary anymore)
     tiled = []
