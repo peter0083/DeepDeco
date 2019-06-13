@@ -2,76 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1204a11-720a-4666-be59-8a21230b853c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_aws.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DeepDeco.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeepDeco.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_generate_instance_map.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000017914.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000029286.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000138805.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000184101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000197384.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000203744.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000284465.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000350505.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000371376.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000426773.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000475177.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000500044.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_img/000000580986.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000017914.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000029286.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000138805.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000184101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000197384.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000203744.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000284465.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000350505.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000371376.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000426773.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000475177.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000500044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_inst/000000580986.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000017914.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000029286.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000138805.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000184101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000197384.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000203744.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000284465.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000350505.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000371376.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000426773.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000475177.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000500044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/train_label/000000580986.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_img/000000000139.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_img/000000000285.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_img/000000000632.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_img/000000000724.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_img/000000000776.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_img/000000000785.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_img/000000000802.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_img/000000000872.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_inst/000000000139.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_inst/000000000285.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_inst/000000000632.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_inst/000000000724.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_inst/000000000776.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_inst/000000000785.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_inst/000000000802.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_inst/000000000872.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_label/000000000139.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_label/000000000285.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_label/000000000632.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_label/000000000724.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_label/000000000776.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_label/000000000785.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_label/000000000802.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/datasets_mini copy/coco_stuff/val_label/000000000872.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_aws.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_aws.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train_aws.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="370">
+              <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
               <folding>
                 <element signature="e#253#262#0" expanded="true" />
               </folding>
@@ -181,6 +112,12 @@
               <item name="DeepDeco" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepDeco" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DeepDeco" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepDeco" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gaugan" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -330,8 +267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train_aws.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="370">
+          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
           <folding>
             <element signature="e#253#262#0" expanded="true" />
           </folding>
