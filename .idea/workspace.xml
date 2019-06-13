@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1204a11-720a-4666-be59-8a21230b853c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/gaugan/util/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gaugan/util/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gaugan/trainers/pix2pix_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gaugan/trainers/pix2pix_trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,13 +48,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gaugan/util/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="50" column="59" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
+            <state relative-caret-position="419">
+              <caret line="52" column="62" lean-forward="true" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
               <folding>
                 <element signature="e#176#185#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gaugan/trainers/pix2pix_trainer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+              <folding>
+                <element signature="e#176#243#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,6 +89,7 @@
         <option value="$PROJECT_DIR$/src/gaugan/models/pix2pix_model.py" />
         <option value="$PROJECT_DIR$/train_aws.py" />
         <option value="$PROJECT_DIR$/src/gaugan/util/util.py" />
+        <option value="$PROJECT_DIR$/src/gaugan/trainers/pix2pix_trainer.py" />
       </list>
     </option>
   </component>
@@ -294,22 +307,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gaugan/trainers/pix2pix_trainer.py">
+    <entry file="file://$PROJECT_DIR$/src/gaugan/util/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="419">
+          <caret line="52" column="62" lean-forward="true" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
           <folding>
-            <element signature="e#176#243#0" expanded="true" />
+            <element signature="e#176#185#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gaugan/util/util.py">
+    <entry file="file://$PROJECT_DIR$/src/gaugan/trainers/pix2pix_trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="50" column="59" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
+        <state relative-caret-position="795">
+          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding>
-            <element signature="e#176#185#0" expanded="true" />
+            <element signature="e#176#243#0" expanded="true" />
           </folding>
         </state>
       </provider>
