@@ -4,8 +4,8 @@ Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses
 """
 
 import torch
-import gaugan.models.networks as networks
-import gaugan.util.util as util
+import models.networks as networks
+import util.util as util
 
 
 class Pix2PixModel(torch.nn.Module):
