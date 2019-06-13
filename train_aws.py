@@ -44,17 +44,28 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 # to be added: a way to programmatically find the directory then save files
 
-# for local training
+# for local training (need GPU)
 # train gaugan path: /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py
 # label path: /Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label
-# image path: /Users/peterlin/DeepDeco/dataset/datasets_mini copy/coco_stuff/val_img
+# image path: /Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img
 # number of classes: 80 + 91 = 171
 
 # full command python /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
 #               'custom --label_dir "/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
-#               '"/Users/peterlin/DeepDeco/dataset/datasets_mini copy/coco_stuff/val_img" --label_nc 171 '
+#               '"/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 171 '
+
+
+# for AWS training
+# train gaugan path: /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py
+# label path: /home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_label
+# image path: /home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_img
+# full command python /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+#               'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
+#               '"/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 171 '
 
 print("training Nvidia GauGAN")
-bashCommand = '
+bashCommand = 'python /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+               'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
+               '"/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 171 '
 print("running bash command")
 os.system(bashCommand)
