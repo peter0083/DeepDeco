@@ -50,9 +50,11 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 # image path: /Users/peterlin/DeepDeco/dataset/datasets_mini copy/coco_stuff/val_img
 # number of classes: 80 + 91 = 171
 
+# full command python /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+#               'custom --label_dir "/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
+#               '"/Users/peterlin/DeepDeco/dataset/datasets_mini copy/coco_stuff/val_img" --label_nc 171 '
+
 print("training Nvidia GauGAN")
-bashCommand = 'python /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
-              'custom --label_dir "/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
-              '"/Users/peterlin/DeepDeco/dataset/datasets_mini copy/coco_stuff/val_img" --label_nc 171 '
+bashCommand = '
 print("running bash command")
 os.system(bashCommand)
