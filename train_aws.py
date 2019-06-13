@@ -4,6 +4,9 @@
 # the following models in the order listed
 # 1. Nvidia GauGan
 # 2. MS AttnGAN
+
+# to run this script on AWS Linux
+# execute "sudo python train_aws.py"
 ##############################################
 
 import os
