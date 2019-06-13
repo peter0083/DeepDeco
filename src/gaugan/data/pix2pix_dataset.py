@@ -78,7 +78,9 @@ class Pix2pixDataset(BaseDataset):
         if self.opt.no_instance:
             instance_tensor = 0
         else:
-            instance_path = self.instance_paths[index]
+            print(self.instance_paths)
+            quit()
+            #instance_path = self.instance_paths[index]
             instance = Image.open(instance_path)
             if instance.mode == 'L':
                 instance_tensor = transform_label(instance) * 255
