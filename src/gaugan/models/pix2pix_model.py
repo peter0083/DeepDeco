@@ -7,6 +7,7 @@ import torch
 import models.networks as networks
 import util.util as util
 
+torch.cuda.current_device()
 
 class Pix2PixModel(torch.nn.Module):
     @staticmethod
