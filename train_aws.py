@@ -56,7 +56,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 # image path: /Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img
 # number of classes: 80 + 91 = 171
 
-# full command python /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+# full command python3 /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
 #               'custom --label_dir "/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
 #               '"/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 171 --gpu_ids 1'
 
@@ -65,13 +65,13 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 # train gaugan path: /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py
 # label path: /home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_label
 # image path: /home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_img
-# full command python /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+# full command python3 /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
 #               'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
 #               '"/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 171 --gpu_ids 1'
 
 print("training Nvidia GauGAN")
 
-bashCommand = 'python /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+bashCommand = 'python3 /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
                'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
                '"/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 171 --gpu_ids 1'
 print("running bash command")
