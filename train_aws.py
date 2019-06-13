@@ -61,10 +61,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 # image path: /home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_img
 # full command python /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
 #               'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
-#               '"/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 171 --gpu_ids'
-
-print("remove AMZ built-in Nvidia drivers")
-os.command("sudo yum erase nvidia cuda")
+#               '"/home/ubuntu/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 171 --gpu_ids
 
 print("training Nvidia GauGAN")
 
