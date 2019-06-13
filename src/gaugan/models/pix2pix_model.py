@@ -5,9 +5,7 @@ Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses
 
 import torch
 import models.networks as networks
-import util.util as util
-
-torch.cuda.current_device()
+import util.util as uti
 
 class Pix2PixModel(torch.nn.Module):
     @staticmethod
