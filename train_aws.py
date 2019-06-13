@@ -6,7 +6,10 @@
 # 2. MS AttnGAN
 
 # to run this script on AWS Linux
-# execute "sudo python train_aws.py"
+# ensure that `sudo python3 -V` gives your python 3.6
+# ensure that `sudo pip install -r requirements.txt` is successful
+# then
+# execute "sudo python3 train_aws.py"
 ##############################################
 
 import os
