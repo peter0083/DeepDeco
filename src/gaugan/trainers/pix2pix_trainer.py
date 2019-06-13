@@ -48,7 +48,7 @@ class Pix2PixTrainer():
         self.d_losses = d_losses
 
     def get_latest_losses(self):
-        return {**self.g_losses, **self.d_losses}
+        return {self.g_losses, self.d_losses}
 
     def get_latest_generated(self):
         return self.generated
