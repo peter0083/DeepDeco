@@ -5,8 +5,6 @@ Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses
 
 from data.pix2pix_dataset import Pix2pixDataset
 from data.image_folder import make_dataset
-# import boto3 to retrieve data directly from S3
-import boto3
 
 
 ###############################################################################
