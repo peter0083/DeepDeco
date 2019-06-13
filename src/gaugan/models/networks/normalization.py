@@ -7,7 +7,7 @@ import re
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from gaugan.models.networks.sync_batchnorm import SynchronizedBatchNorm2d
+from models.networks.sync_batchnorm import SynchronizedBatchNorm2d
 import torch.nn.utils.spectral_norm as spectral_norm
 
 

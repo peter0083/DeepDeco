@@ -3,8 +3,8 @@ Copyright (C) 2019 NVIDIA Corporation.  All rights reserved.
 Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 """
 
-from gaugan.models.networks.sync_batchnorm import DataParallelWithCallback
-from gaugan.models.pix2pix_model import Pix2PixModel
+from models.networks.sync_batchnorm import DataParallelWithCallback
+from models.pix2pix_model import Pix2PixModel
 
 
 class Pix2PixTrainer():

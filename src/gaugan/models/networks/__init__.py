@@ -4,12 +4,12 @@ Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses
 """
 
 import torch
-from gaugan.models.networks.base_network import BaseNetwork
-from gaugan.models.networks.loss import *
-from gaugan.models.networks.discriminator import *
-from gaugan.models.networks.generator import *
-from gaugan.models.networks.encoder import *
-import gaugan.util.util as util
+from models.networks.base_network import BaseNetwork
+from models.networks.loss import *
+from models.networks.discriminator import *
+from models.networks.generator import *
+from models.networks.encoder import *
+import util.util as util
 
 
 def find_network_using_name(target_network_name, filename):

@@ -6,10 +6,10 @@ Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses
 import sys
 import argparse
 import os
-from gaugan.util import util
+from util import util
 import torch
-import gaugan.models as models
-import gaugan.data
+import models
+import data
 import pickle
 
 

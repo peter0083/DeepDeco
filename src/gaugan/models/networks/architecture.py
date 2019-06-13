@@ -8,7 +8,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision
 import torch.nn.utils.spectral_norm as spectral_norm
-from gaugan.models.networks.normalization import SPADE
+from models.networks.normalization import SPADE
 
 
 # ResNet block that uses SPADE.
