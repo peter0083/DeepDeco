@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1204a11-720a-4666-be59-8a21230b853c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/gaugan/options/base_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gaugan/options/base_options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_aws.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_aws.py" afterDir="false" />
-    </list>
+    <list default="true" id="d1204a11-720a-4666-be59-8a21230b853c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +25,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train_aws.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
+            <state relative-caret-position="340">
               <caret line="78" column="72" selection-start-line="78" selection-start-column="72" selection-end-line="78" selection-end-column="72" />
               <folding>
                 <element signature="e#253#262#0" expanded="true" />
@@ -272,7 +269,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1152" height="613" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28116712" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -417,7 +413,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train_aws.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
+        <state relative-caret-position="340">
           <caret line="78" column="72" selection-start-line="78" selection-start-column="72" selection-end-line="78" selection-end-column="72" />
           <folding>
             <element signature="e#253#262#0" expanded="true" />
