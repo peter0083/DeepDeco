@@ -54,7 +54,8 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 print("MS AttnGAN inference")
 
-bashCommand = 'sudo python3 /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg cfg/eval_coco.yml --gpu 1'
+bashCommand = 'sudo python3 /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
+              '/home/ubuntu/DeepDeco/src/attngan/code/cfg/eval_coco.yml --gpu 1 '
 print("running bash command")
 
 os.system(bashCommand)

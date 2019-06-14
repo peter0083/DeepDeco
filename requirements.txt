@@ -8,4 +8,4 @@ python-dateutil
 easydict
 pandas
 torchfile
-nltk
+nlt
