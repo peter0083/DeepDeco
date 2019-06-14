@@ -1,0 +1,5 @@
+A traffic light with car passing underneath on the road.
+A traffic light suspended over the top of a car.
+A signal point on a road with very light traffic.
+A street intersection with two traffic lights showing red.
+A car stopped at an intersection with a red traffic signal.

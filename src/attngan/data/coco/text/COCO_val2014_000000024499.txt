@@ -1,0 +1,5 @@
+A  single street sign with information regarding parking.
+This sign is a parking meter sign that indicates a time limit of 30 minutes.
+A hand holds a ball in a green sign that sits on a post.
+a sign for what looks like a parking meter.
+A sign depicting a hand with change that reads "30 min."

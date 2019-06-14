@@ -1,0 +1,5 @@
+A pole with traffic signs and street signs. 
+Street signs indicating names of streets and a one way direction.
+three street signs giving street names and a direction sign
+Allen Street is a one way street according to the sign at Allen and Houston.
+A street post with street signs and a one way sign on it, along with a building in the background.

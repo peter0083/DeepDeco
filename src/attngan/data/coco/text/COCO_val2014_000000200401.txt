@@ -1,0 +1,5 @@
+A parking meter for bikes on the curb side.
+A parking meter that remains as a courtesy to cyclists.
+A parking meter with a sign reading, "Meter remains as a courtesy to cyclists"
+A parking meter indicating a preference given to bicycles.
+A meter set as a courtesy to people who ride their bikes.

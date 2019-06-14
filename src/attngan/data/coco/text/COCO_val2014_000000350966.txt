@@ -1,0 +1,5 @@
+A train inside a station moving at a regular speed.
+A subway station with people and an incoming subway.
+A subway train pulling into the train station.
+Train stopped on the side of the train way.
+A train moving through a station with people in the background.

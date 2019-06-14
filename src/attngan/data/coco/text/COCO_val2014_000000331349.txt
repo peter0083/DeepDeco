@@ -1,0 +1,5 @@
+A simple kitchen with several cabinets and a fridge.
+A kitchen has a refrigerator and a microwave.
+The kitchen is clean and ready for us to use. 
+There is a black refrigerator and dishwasher and wood cabinets.
+The black refrigerator is near wooden kitchen cabinets.
