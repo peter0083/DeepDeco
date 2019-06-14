@@ -5,12 +5,23 @@
 # 1. a text description of the object (MS AttnGAN)
 # 2. a outline image of an object (Nvidia GauGan)
 
-# to run this script on AWS Linux
+# to run this script on AWS Linux Set up the data folder to contain four things:
+#
+# 'train' folder. This contains 'filenames.pickle' for the training files 'test' folder. This should contain
+#  'filenames.pickle' for the test files
+#
+# 'coco' folder. This should contain all the images from the coco dataset. (train, val and test)
+#
+# 'captions.pickle' (if you plan to use pre-trained models)
+#  Update your configuration files in 'code/cfg/' to point to the parent
+#
+# directory of the 'coco' folder. E.g: if 'coco' folder is in 'data/coco/coco' path, put the 'data' path in your
+# config files as 'data/coco'
+#
 # ensure that `sudo python3 -V` gives your python 3.6
-# ensure that `sudo conda install --file requirements.txt` is successful
-# then
-# execute "sudo python3 inference_aws.py"
-##############################################
+#
+# ensure that `sudo conda install --file requirements.txt` is successful then execute "sudo python3 inference_aws.py"
+# #############################################
 
 import os
 import boto3

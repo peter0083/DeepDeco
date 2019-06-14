@@ -1,7 +1,7 @@
 CONFIG_NAME: 'attn2'
 
 DATASET_NAME: 'coco'
-DATA_DIR: '../data/coco'
+DATA_DIR: '/home/ubuntu/DeepDeco/src/attngan/data/coco/'
 GPU_ID: 3
 WORKERS: 1
 

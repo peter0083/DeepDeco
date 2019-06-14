@@ -130,7 +130,7 @@ class TextDataset(data.Dataset):
             pd.read_csv(filepath, delim_whitespace=True, header=None)
         filenames = df_filenames[1].tolist()
         print('Total filenames: ', len(filenames), filenames[0])
-        #
+
         filename_bbox = {img_file[:-4]: [] for img_file in filenames}
         numImgs = len(filenames)
         for i in range(0, numImgs):
