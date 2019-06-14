@@ -1,0 +1,4 @@
+# Don't track content of these folders
+annotations/
+.gitmodules
+.ipynb_checkpoints
