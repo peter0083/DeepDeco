@@ -228,8 +228,9 @@ def build_super_images2(real_imgs, captions, cap_lens, ixtoword,
             mask = one_map > thresh
             one_map = one_map * mask
             if (vis_size // att_sze) > 1:
+                vis_size_to_att_sze = vis_size // att_sze,
                 one_map = \
-                    transform.pyramid_expand(one_map, sigma=20, upscale=vis_size // att_sze, multichannel=True)
+                    transform.pyramid_expand(one_map, sigma=20, upscale=vis_size_to_att_sze, multichannel=True)
             minV = one_map.min()
             maxV = one_map.max()
             one_map = (one_map - minV) / (maxV - minV)
