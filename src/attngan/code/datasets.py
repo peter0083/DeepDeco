@@ -217,7 +217,7 @@ class TextDataset(data.Dataset):
                 ixtoword, wordtoix, len(ixtoword)]
 
     def load_text_data(self, data_dir, split):
-        filepath = '/home/ubuntu/DeepDeco/src/attngan/data/coco/'
+        filepath = '/home/ubuntu/DeepDeco/src/attngan/data/coco/captions.pickle'
         train_names = self.load_filenames(data_dir, 'train')
         test_names = self.load_filenames(data_dir, 'test')
         if not os.path.isfile(filepath):
