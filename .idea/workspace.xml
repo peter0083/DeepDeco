@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1204a11-720a-4666-be59-8a21230b853c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/gaugan/data/pix2pix_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gaugan/data/pix2pix_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_aws.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_aws.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train_aws.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+            <state relative-caret-position="359">
+              <caret line="76" column="101" selection-start-line="76" selection-start-column="101" selection-end-line="76" selection-end-column="101" />
               <folding>
                 <element signature="e#253#262#0" expanded="true" />
               </folding>
@@ -48,12 +48,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gaugan/data/pix2pix_dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+            <state relative-caret-position="22">
+              <caret line="54" column="61" lean-forward="true" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gaugan/options/base_options.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-489" />
           </provider>
         </entry>
       </file>
@@ -111,8 +118,8 @@
         <option value="$PROJECT_DIR$/src/gaugan/trainers/pix2pix_trainer.py" />
         <option value="$PROJECT_DIR$/src/gaugan/models/pix2pix_model.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/train_aws.py" />
         <option value="$PROJECT_DIR$/src/gaugan/data/pix2pix_dataset.py" />
+        <option value="$PROJECT_DIR$/train_aws.py" />
       </list>
     </option>
   </component>
@@ -167,6 +174,13 @@
               <item name="gaugan" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
               <item name="networks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DeepDeco" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepDeco" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gaugan" type="462c0819:PsiDirectoryNode" />
+              <item name="options" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DeepDeco" type="b2602c69:ProjectViewProjectNode" />
@@ -358,26 +372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gaugan/data/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="e#176#192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_aws.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-          <folding>
-            <element signature="e#253#262#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gaugan/trainers/pix2pix_trainer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -388,10 +382,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gaugan/data/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="e#176#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gaugan/options/train_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gaugan/data/pix2pix_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+        <state relative-caret-position="22">
+          <caret line="54" column="61" lean-forward="true" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gaugan/options/base_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-489" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_aws.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="76" column="101" selection-start-line="76" selection-start-column="101" selection-end-line="76" selection-end-column="101" />
+          <folding>
+            <element signature="e#253#262#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
