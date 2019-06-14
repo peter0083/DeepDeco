@@ -6,3 +6,5 @@ annotations/
 .idea/
 __pycache__/
 *.pyc
+*.iml
+*.xml
