@@ -54,11 +54,11 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 # train gaugan path: /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py
 # label path: /Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label
 # image path: /Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img
-# number of classes: 80 + 91 = 171
+# number of classes: class labels cannot in the range [0, n_class - 1 ] so I put 8 for now
 
 # full command python3 /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
 #               'custom --label_dir "/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
-#               '"/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 171 --gpu_ids 0'
+#               '"/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img" --label_nc 8 --gpu_ids 0'
 
 
 # for AWS training
@@ -74,7 +74,7 @@ print("training Nvidia GauGAN")
 
 bashCommand = 'python3 /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
                'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_label" --image_dir ' \
-               '"/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img" --label_nc 171 --no_instance --gpu_ids 0'
+               '"/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img" --label_nc 8 --no_instance --gpu_ids 0'
 print("running bash command")
 
 os.system(bashCommand)
