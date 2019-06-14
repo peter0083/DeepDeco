@@ -1,0 +1,5 @@
+A surfing simulator with actual water in the city. 
+A person riding a surfing water attraction in a city with people watching.
+A wave simulator with people riding boards on top of it.
+People are watching as others slide down a small pool.
+A few people waiting in line to use an fake surf attraction.

@@ -1,0 +1,5 @@
+Batter, catcher and umpire in a game of baseball.
+A baseball player who is swinging at a ball.
+A baseball player swings to hit a baseball and a catcher reaches for the ball.
+A baseball player batting while a catcher and umpire wait behind him and people watch from the stands and dugout.
+A baseball player swinging at a baseball while the catcher is behind him with hand extended to catch the ball.
