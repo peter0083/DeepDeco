@@ -217,8 +217,7 @@ class TextDataset(data.Dataset):
                 ixtoword, wordtoix, len(ixtoword)]
 
     def load_text_data(self, data_dir, split):
-        filepath = '/Users/peterlin/AttnGAN/data/birds/captions.pickle'
-        #filepath = os.path.join(data_dir, 'captions.pickle')
+        filepath = os.path.join(data_dir, 'captions.pickle')
         train_names = self.load_filenames(data_dir, 'train')
         test_names = self.load_filenames(data_dir, 'test')
         if not os.path.isfile(filepath):
