@@ -4,3 +4,8 @@ torchvision
 dominate>=2.3.1
 dill
 scikit-image
+python-dateutil
+easydict
+pandas
+torchfile
+nltk
