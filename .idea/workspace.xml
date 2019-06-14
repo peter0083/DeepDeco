@@ -49,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/src/attngan/code/miscc/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -83,6 +83,7 @@
       <find>MultiscaleDiscri</find>
       <find>TextDataSet</find>
       <find>transform</find>
+      <find>skimage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -480,7 +481,7 @@
     <entry file="file://$PROJECT_DIR$/src/attngan/code/miscc/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>
