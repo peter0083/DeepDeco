@@ -3,4 +3,6 @@ annotations/
 .ipynb_checkpoints/
 .DS_Store
 !.gitmodules
-
+.idea/
+__pycache__/
+*.pyc
