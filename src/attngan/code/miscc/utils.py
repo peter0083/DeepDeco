@@ -8,7 +8,7 @@ import torch.nn as nn
 
 from PIL import Image, ImageDraw, ImageFont
 from copy import deepcopy
-import skimage.transform
+import skimage
 
 from miscc.config import cfg
 
