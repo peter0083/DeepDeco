@@ -9,6 +9,9 @@ import torch.nn.functional as F
 from models.networks.base_network import BaseNetwork
 from models.networks.normalization import get_nonspade_norm_layer
 import util.util as util
+import logging
+
+logging.warning("Now running Multiscale Discriminator class object")
 
 
 class MultiscaleDiscriminator(BaseNetwork):
