@@ -74,7 +74,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 print("training Nvidia GauGAN")
 
-bashCommand = 'python3 /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+bashCommand = 'sudo python3 /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
                'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_label" --image_dir ' \
                '"/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img" --no_instance --gpu_ids 0'
 print("running bash command")

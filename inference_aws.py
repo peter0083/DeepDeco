@@ -45,38 +45,16 @@ def download_directory_from_s3(bucket_name,
 
 download_directory_from_s3('gauganspade', 'datasets_mini')
 
+# add download for attnGAN in WK3
+
 # Part 2-1
 # AttnGAN
 
 # to be added: a way to programmatically find the directory then save files
 
-# for local training (need GPU)
-# train gaugan path: /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py
-# label path: /Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label
-# image path: /Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img
-# --no_instance
-# number of classes: class labels cannot in the range [0, n_class - 1 ] leave as default 182
+print("MS AttnGAN inference")
 
-# full command python3 /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
-#               'custom --label_dir "/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
-#               '"/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img" --gpu_ids 0'
-
-
-# for AWS training
-# train gaugan path: /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py
-# label path: /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_label
-# image path: /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img
-# --no_instance
-# number of classes: class labels cannot in the range [0, n_class - 1 ] leave as default 182
-# full command python3 /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
-#               'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_label" --image_dir ' \
-#               '"/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img" --label_nc --no_instance --gpu_ids 0'
-
-print("training Nvidia GauGAN")
-
-bashCommand = 'python3 /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
-               'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_label" --image_dir ' \
-               '"/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img" --no_instance --gpu_ids 0'
+bashCommand = 'sudo python3 /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg cfg/eval_coco.yml --gpu 1'
 print("running bash command")
 
 os.system(bashCommand)
