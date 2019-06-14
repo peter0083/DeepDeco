@@ -5,7 +5,9 @@ Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses
 
 from models.networks.sync_batchnorm import DataParallelWithCallback
 from models.pix2pix_model import Pix2PixModel
+import logging
 
+logging.warning('Now calling Pix2PixTrainer!')
 
 class Pix2PixTrainer():
     """
