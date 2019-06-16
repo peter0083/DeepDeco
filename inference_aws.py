@@ -18,9 +18,9 @@
 # directory of the 'coco' folder. E.g: if 'coco' folder is in 'data/coco/coco' path, put the 'data' path in your
 # config files as 'data/coco'
 #
-# ensure that `sudo python3 -V` gives your python 3.6
+# ensure that `sudo python -V` gives your python 3.6
 #
-# ensure that `sudo conda install --file requirements.txt` is successful then execute "sudo python3 inference_aws.py"
+# ensure that `sudo conda install --file requirements.txt` is successful then execute "sudo python inference_aws.py"
 # #############################################
 
 import os
@@ -65,7 +65,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 print("MS AttnGAN inference")
 
-bashCommand = 'sudo python3 /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
+bashCommand = 'sudo python /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
               '/home/ubuntu/DeepDeco/src/attngan/code/cfg/eval_coco.yml --gpu 0 '
 print("running bash command")
 
