@@ -6,10 +6,10 @@
 # 2. MS AttnGAN
 
 # to run this script on AWS Linux
-# ensure that `sudo python3 -V` gives your python 3.6
+# ensure that `sudo python -V` gives your python 3.6
 # ensure that `sudo pip install -r requirements.txt` is successful
 # then
-# execute "sudo python3 train_aws.py"
+# execute "sudo python train_aws.py"
 ##############################################
 
 import os
@@ -57,7 +57,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 # --no_instance
 # number of classes: class labels cannot in the range [0, n_class - 1 ] leave as default 182
 
-# full command python3 /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+# full command python /Users/peterlin/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
 #               'custom --label_dir "/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label" --image_dir ' \
 #               '"/Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_img" --gpu_ids 0'
 
@@ -68,13 +68,13 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 # image path: /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img
 # --no_instance
 # number of classes: class labels cannot in the range [0, n_class - 1 ] leave as default 182
-# full command python3 /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+# full command python /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
 #               'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_label" --image_dir ' \
 #               '"/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img" --label_nc --no_instance --gpu_ids 0'
 
 print("training Nvidia GauGAN")
 
-bashCommand = 'sudo python3 /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
+bashCommand = 'sudo python /home/ubuntu/DeepDeco/src/gaugan/train_gaugan.py --name "local-testrun" --dataset_mode ' \
                'custom --label_dir "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_label" --image_dir ' \
                '"/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img" --no_instance --gpu_ids 0'
 print("running bash command")
