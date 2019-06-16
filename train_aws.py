@@ -1,5 +1,5 @@
 ##############################################
-# this script downloads the data from s3
+# this script downloads the data from
 # then runs the train scripts to train
 # the following models in the order listed
 # 1. Nvidia GauGan
