@@ -70,3 +70,9 @@ bashCommand = 'sudo python /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg 
 print("running bash command")
 
 os.system(bashCommand)
+
+# Part 2-2
+# GauGAN
+
+print("NVIDIA GauGAN inference")
+
