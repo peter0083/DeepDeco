@@ -26,6 +26,19 @@ else:
 
 
 def prepare_data(data):
+<<<<<<< HEAD
+=======
+
+    """
+    This function processes data for training by sorting and indexing it
+
+    :param data: a object that contains imgs, captions, captions_lens,
+                 class_ids, keys
+    :return: a list of variable: [real_imgs, captions, sorted_cap_lens,
+            class_ids, keys]
+    """
+
+>>>>>>> bdd51a3658d2df323c4c88f8f320a7b8d626b875
     imgs, captions, captions_lens, class_ids, keys = data
 
     # sort data by the length in a decreasing order
