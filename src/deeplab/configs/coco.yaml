@@ -5,7 +5,7 @@ EXP:
 DATASET:
     NAME: coco
     ROOT:
-    LABELS: ./data/datasets/coco/labels.txt
+    LABELS: /home/ubuntu/DeepDeco/src/deeplab/data/datasets/coco/labels.txt
     N_CLASSES: 91
     IGNORE_LABEL:
     SCALES:
