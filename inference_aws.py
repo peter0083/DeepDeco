@@ -65,13 +65,32 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 print("MS AttnGAN inference")
 
-bashCommand = 'sudo python /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
+bashCommand21 = 'sudo python /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
               '/home/ubuntu/DeepDeco/src/attngan/code/cfg/eval_coco.yml --gpu 0 '
 print("running bash command")
 
-os.system(bashCommand)
+os.system(bashCommand21)
 
 # Part 2-2
+# DeepLab V2
+
+print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
+
+bashCommand221 = 'bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
+
+os.sysconf(bashCommand221)
+
+print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
+
+bashCommand222 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
+
+os.sysconf(bashCommand222)
+
+print("DeepLab V2 segmentation: now segmenting image....")
+
+#bashCommand223 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single -c src/deeplab/configs/coco.yaml -m '
+
+# Part 2-3
 # GauGAN
 
 print("NVIDIA GauGAN inference")
