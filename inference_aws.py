@@ -74,21 +74,31 @@ os.system(bashCommand21)
 # Part 2-2
 # DeepLab V2
 
-print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
+print("DeepLab V2 segmentation: setup conda environment")
 
-bashCommand221 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
+bashCommand220 = 'conda env create -f configs/conda_env.yaml'
+
+os.system(bashCommand220)
+
+bashCommand221 = 'conda activate deeplab-pytorch'
 
 os.system(bashCommand221)
 
-print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
+print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
 
-bashCommand222 = 'sudo sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
+bashCommand222 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
 
 os.system(bashCommand222)
 
+print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
+
+bashCommand223 = 'sudo sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
+
+os.system(bashCommand223)
+
 print("DeepLab V2 segmentation: now segmenting image....")
 
-#bashCommand223 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single -c src/deeplab/configs/coco.yaml -m '
+#bashCommand224 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single -c src/deeplab/configs/coco.yaml -m '
 
 # Part 2-3
 # GauGAN
