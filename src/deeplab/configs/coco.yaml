@@ -1,6 +1,6 @@
 EXP:
     ID: coco
-    OUTPUT_DIR: data
+    OUTPUT_DIR: /home/ubuntu/DeepDeco/src/deeplab/data
 
 DATASET:
     NAME: coco
