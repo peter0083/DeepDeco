@@ -76,13 +76,13 @@ os.system(bashCommand21)
 
 print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
 
-bashCommand221 = 'bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
+bashCommand221 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
 
 os.system(bashCommand221)
 
 print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
 
-bashCommand222 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
+bashCommand222 = 'sudo sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
 
 os.system(bashCommand222)
 
