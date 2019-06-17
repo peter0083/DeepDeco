@@ -98,7 +98,11 @@ os.system(bashCommand223)
 
 print("DeepLab V2 segmentation: now segmenting image....")
 
-#bashCommand224 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single -c src/deeplab/configs/coco.yaml -m '
+bashCommand224 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single -c /home/ubuntu/DeepDeco/src/deeplab/configs/coco.yaml -m '
+
+os.system(bashCommand224)
+
+print("DeepLab V2 segmentation: completed")
 
 # Part 2-3
 # GauGAN
