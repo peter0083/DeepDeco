@@ -44,6 +44,6 @@ pip install -r requirements
 
 ## hardcoded filepath that needs to fix
 
-- deeplab convert.py model_path
+- deeplab convert.py file path
 - deeplab setup_caffemodels.sh file path
 - attngan yaml
