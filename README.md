@@ -41,3 +41,8 @@ pip install -r requirements
 ## Run Inference
 
 ## Reference
+
+## hardcoded filepath that needs to fix
+
+- deeplab convert.py model_path
+- attngan yaml
