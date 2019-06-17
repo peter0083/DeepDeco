@@ -180,6 +180,7 @@ def single(config_path, model_path, image_path, cuda, crf):
     plt.tight_layout()
     plt.show()
     plt.savefig('segmented.png')
+    print('....................output image saved....................')
 
 
 @main.command()
