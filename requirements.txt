@@ -1,0 +1,11 @@
+# gaugan
+torch>=1.1.0
+torchvision
+dominate>=2.3.1
+dill
+scikit-image>=0.15.0
+python-dateutil
+easydict
+pandas
+torchfile
+nltk

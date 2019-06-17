@@ -1,0 +1,5 @@
+A traffic light with a pedestrian crossing signal.
+A traffic sign reads yellow on a clear day.
+A street pole with a yellow light and a no-walking sign.
+The traffic light has turned yellow; proceed with caution.
+A traffic light on a pole on a street.

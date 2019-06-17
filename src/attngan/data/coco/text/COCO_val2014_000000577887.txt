@@ -1,0 +1,5 @@
+Part of a pizza is displayed showing it's toppings. 
+A partial view of a thin crust pizza with asparagus.
+A closeup of a pizza on a wooden tray.
+Thin crust pizza with meat and vegetable on wooden palate.
+A close-up of a pizza with ham and spinach. 

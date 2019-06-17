@@ -1,0 +1,5 @@
+A plate of food that includes rice, meat and vegetables.
+A plate has meat and an array of vegetables. 
+Broccoli, carrot, and dome other items on a dish.
+A plate of meat, rice and cooked vegetables.
+teriyaki chicken rice and broccoli and mixed vegetables

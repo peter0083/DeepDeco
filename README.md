@@ -11,6 +11,13 @@ git clone https://github.com/peter0083/DeepDeco.git
 cd DeepDeco
 ```
 
+For AWS Ubuntu machines, the Nvidia driver may need to be reinstalled with the following commands:
+
+```bash
+wget http://us.download.nvidia.com/tesla/410.104/NVIDIA-Linux-x86_64-410.104.run
+sudo /bin/sh ./NVIDIA-Linux-x86_64*.run
+```
+
 ## Dependencies
 
 *Packages*

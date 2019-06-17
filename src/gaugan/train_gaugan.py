@@ -5,7 +5,7 @@ Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses
 
 import sys
 from collections import OrderedDict
-from gaugan.options.train_options import TrainOptions
+from options.train_options import TrainOptions
 import data
 from util.iter_counter import IterationCounter
 from util.visualizer import Visualizer

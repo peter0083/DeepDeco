@@ -1,0 +1,5 @@
+A electronic sign at an airport listing the flights.
+A station with departing times on the board.
+A flight board in an airplane from 10-29-2011.
+A timetable for flight arrivals and departures. 
+A foreign airline status board with a clock.

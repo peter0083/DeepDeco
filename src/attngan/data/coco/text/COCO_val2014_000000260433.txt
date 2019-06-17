@@ -1,0 +1,5 @@
+The road sign is visible for all to see. 
+A sign located at the exit of a highway. 
+An empty highway and a highway off ramp.
+An off ramp to exit the highway to the right.
+A freeway off ramp on the side of a road.
