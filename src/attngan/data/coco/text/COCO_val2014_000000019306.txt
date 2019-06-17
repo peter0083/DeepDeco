@@ -1,0 +1,5 @@
+A city street with no traffic line with traffic lights.
+An intersection with traffic lights, no traffic and cones in the street. 
+A street where every light is green. 
+An intersection of a street outside a small village with no traffic.
+An empty street is shown with a stop light that is green.

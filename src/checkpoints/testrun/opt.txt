@@ -1,0 +1,68 @@
+            D_steps_per_G: 1                             
+             aspect_ratio: 1.0                           
+                batchSize: 1                             
+                    beta1: 0.5                           
+                    beta2: 0.999                         
+      cache_filelist_read: False                         
+     cache_filelist_write: False                         
+          checkpoints_dir: ./checkpoints                 
+   contain_dontcare_label: False                         
+           continue_train: False                         
+                crop_size: 256                           
+                 dataroot: ./datasets/cityscapes/        
+             dataset_mode: custom                        	[default: coco]
+                    debug: False                         
+             display_freq: 100                           
+          display_winsize: 256                           
+                 gan_mode: hinge                         
+                  gpu_ids: 0                             
+                image_dir: /Users/peterlin/DeepDeco/dataset/datasets_mini copy/coco_stuff/val_img	[default: None]
+                init_type: xavier                        
+            init_variance: 0.02                          
+             instance_dir:                               
+                  isTrain: True                          	[default: None]
+                label_dir: /Users/peterlin/DeepDeco/dataset/datasets_mini copy/coco_stuff/val_label	[default: None]
+                 label_nc: 200                           	[default: 13]
+              lambda_feat: 10.0                          
+               lambda_kld: 0.05                          
+               lambda_vgg: 10.0                          
+       load_from_opt_file: False                         
+                load_size: 286                           
+                       lr: 0.0002                        
+         max_dataset_size: 9223372036854775807           
+                    model: pix2pix                       
+                 nThreads: 0                             
+               n_layers_D: 4                             
+                     name: testrun                       	[default: label2coco]
+                      ndf: 64                            
+                      nef: 16                            
+                     netD: multiscale                    
+             netD_subarch: n_layer                       
+                     netG: spade                         
+                      ngf: 64                            
+                    niter: 50                            
+              niter_decay: 0                             
+                  no_TTUR: False                         
+                  no_flip: False                         
+          no_ganFeat_loss: False                         
+                  no_html: False                         
+              no_instance: False                         
+         no_pairing_check: False                         
+              no_vgg_loss: False                         
+                   norm_D: spectralinstance              
+                   norm_E: spectralinstance              
+                   norm_G: spectralspadesyncbatch3x3     
+                    num_D: 2                             
+    num_upsampling_layers: normal                        
+                optimizer: adam                          
+                output_nc: 3                             
+                    phase: train                         
+          preprocess_mode: resize_and_crop               
+               print_freq: 100                           
+          save_epoch_freq: 10                            
+         save_latest_freq: 5000                          
+           serial_batches: False                         
+                   tf_log: False                         
+                  use_vae: False                         
+              which_epoch: latest                        
+                    z_dim: 256                           

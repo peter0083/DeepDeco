@@ -1,0 +1,5 @@
+A transit bus making a turn into a garage of some sort.
+A bus turns into a lane with do not enter sign.
+A white bus is parked at the sidewalk.
+A bus is parked in a parking space.
+A bus driving into parking garage, with a do not enter sign in front of it.

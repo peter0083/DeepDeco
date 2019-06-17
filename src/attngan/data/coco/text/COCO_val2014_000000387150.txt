@@ -1,0 +1,5 @@
+Parallel parking between the meters on a city street.
+A car parked on the street by a parking meter.
+A car is parked next to a parking meter.
+This is a car parked in front of a parking meter.
+Multiple vehicles parked curbside next to parking meters.

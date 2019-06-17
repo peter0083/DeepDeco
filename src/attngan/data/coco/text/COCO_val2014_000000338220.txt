@@ -1,0 +1,5 @@
+Train on tracks inside of a brick station. 
+A train that is traveling down some tracks.
+a train that is on and near a bunch of tracks
+A train that is on the tracks inside of a building.
+A train on a rail is passing through a building.
