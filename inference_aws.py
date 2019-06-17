@@ -78,13 +78,13 @@ print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 
 
 bashCommand221 = 'bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
 
-os.sysconf(bashCommand221)
+os.system(bashCommand221)
 
 print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
 
 bashCommand222 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
 
-os.sysconf(bashCommand222)
+os.system(bashCommand222)
 
 print("DeepLab V2 segmentation: now segmenting image....")
 
