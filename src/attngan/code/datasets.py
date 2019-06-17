@@ -26,8 +26,6 @@ else:
 
 
 def prepare_data(data):
-<<<<<<< HEAD
-=======
 
     """
     This function processes data for training by sorting and indexing it
@@ -38,7 +36,6 @@ def prepare_data(data):
             class_ids, keys]
     """
 
->>>>>>> bdd51a3658d2df323c4c88f8f320a7b8d626b875
     imgs, captions, captions_lens, class_ids, keys = data
 
     # sort data by the length in a decreasing order
