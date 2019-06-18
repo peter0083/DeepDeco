@@ -171,7 +171,8 @@ def single(config_path, model_path, image_path, cuda, crf):
 
     for i, label in enumerate(labels):
         mask = labelmap == label
-        fig, ax = plt.subplot(rows, cols, i + 2)
+        ax = plt.subplot(rows, cols, i + 2)
+        fig = plt.subplot(rows, cols, i + 2)
         ax.set_title(classes[label])
         # ax.imshow(raw_image[..., ::-1])
         ax.imshow(mask.astype(np.float32), alpha=0.5)
