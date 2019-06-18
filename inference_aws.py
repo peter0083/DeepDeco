@@ -3,7 +3,7 @@
 # to generate an image based on
 # the following inputs
 # 1. a text description of the object (MS AttnGAN)
-# 2. a outline image of an object (Nvidia GauGan)
+# 2. a outline image of an object (Nvidia GauGAN)
 
 # to run this script on AWS Linux Set up the data folder to contain four things:
 #
@@ -72,7 +72,7 @@ print("running bash command")
 os.system(bashCommand21)
 
 # Part 2-2
-# DeepLab V2
+# Deep Lab
 
 print("DeepLab V2 segmentation: setup conda environment")
 
@@ -92,7 +92,7 @@ os.system(bashCommand222)
 
 print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
 
-bashCommand223 = 'sudo sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
+bashCommand223 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
 
 os.system(bashCommand223)
 
@@ -108,8 +108,15 @@ os.system(bashCommand224)
 
 print("DeepLab V2 segmentation: completed")
 
-# Part 2-3
-# GauGAN
 
-print("NVIDIA GauGAN inference")
+# Part 2-3
+# Deep photo style transfer
+
+#print("Deep photo style transfer inference")
+
+#bashCommand23 = "python /home/ubuntu/DeepDeco/src/deep_photostyle.py --content_image_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_img/000000371376.jpg " \
+#                "--style_image_path " \
+#                "/home/ubuntu/DeepDeco/src/attngan/models/coco_AttnGAN2/example_captions/0_s_0_g1.png --content_seg_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_inst/000000371376.png --style_seg_path " \
+#                " --style_option 2 "
+
 

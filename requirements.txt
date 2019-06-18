@@ -12,6 +12,12 @@ pandas
 torchfile
 nltk
 
+# deep style transfer
+tensorflow
+pillow
+gcc7
+pycuda
+
 # deeplab
 addict
 opencv
