@@ -173,13 +173,13 @@ def single(config_path, model_path, image_path, cuda, crf):
         mask = labelmap == label
         ax = plt.subplot(rows, cols, i + 2)
         ax.set_title(classes[label])
-        ax.imshow(raw_image[..., ::-1])
+        # ax.imshow(raw_image[..., ::-1])
+        ax.savefig(classes[label]+'.png')
         ax.imshow(mask.astype(np.float32), alpha=0.5)
         ax.axis("off")
 
     plt.tight_layout()
     plt.show()
-    plt.savefig('segmented2.png')
     print('....................output image saved....................')
 
 
