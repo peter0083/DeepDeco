@@ -178,7 +178,6 @@ def single(config_path, model_path, image_path, cuda, crf):
         mask[mask == 1] = 255
 
         figname = str(classes[label]) + str(i) + '.png'
-        ax.figure.savefig(figname.format(i))
         im = Image.fromarray(mask)
         im.save(figname)
 
