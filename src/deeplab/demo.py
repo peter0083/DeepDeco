@@ -171,13 +171,11 @@ def single(config_path, model_path, image_path, cuda, crf):
 
     for i, label in enumerate(labels):
         mask = labelmap == label
-        print('this is stored in mask')
-        print(mask)
-        ax = plt.figure()
+        ax = plt.figure(mask.astype(np.float32), alpha=0.5)
         # ax = plt.subplot(rows, cols, i + 2)
         # ax.set_title(classes[label])
         # ax.imshow(raw_image[..., ::-1])
-        ax.imshow(mask.astype(np.float32), alpha=0.5)
+        # ax.imshow(mask.astype(np.float32), alpha=0.5)
         figname = str(classes[label]) + str(i) + '.png'
         ax.figure.savefig(figname.format(i))
         ax.axis("off")
