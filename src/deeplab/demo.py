@@ -171,6 +171,8 @@ def single(config_path, model_path, image_path, cuda, crf):
 
     for i, label in enumerate(labels):
         mask = labelmap == label
+        print('this is stored in mask')
+        print(mask)
         ax = plt.figure()
         # ax = plt.subplot(rows, cols, i + 2)
         # ax.set_title(classes[label])
