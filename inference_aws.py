@@ -102,7 +102,7 @@ bashCommand224 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single' 
                  ' -c /home/ubuntu/DeepDeco/src/deeplab/configs/coco.yaml' \
                  ' -m /home/ubuntu/DeepDeco/src/deeplab/data/models/coco/deeplabv1_resnet101/caffemodel' \
                  '/deeplabv1_resnet101-coco.pth' \
-                 ' -i /home/ubuntu/DeepDeco/src/attngan/models/coco_AttnGAN2/example_captions/0_s_0_g2.png'
+                 ' -i /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img/000000000632.jpg'
 
 os.system(bashCommand224)
 
