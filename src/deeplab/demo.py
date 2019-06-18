@@ -172,7 +172,7 @@ def single(config_path, model_path, image_path, cuda, crf):
     for i, label in enumerate(labels):
         mask = labelmap == label
         ax = plt.subplot(rows, cols, i + 2)
-        ax.set_title(classes[label])
+        # ax.set_title(classes[label])
         # ax.imshow(raw_image[..., ::-1])
         ax.imshow(mask.astype(np.float32), alpha=0.5)
         figname = str(classes[label]) + str(i) + '.png'
@@ -181,7 +181,7 @@ def single(config_path, model_path, image_path, cuda, crf):
 
     plt.tight_layout()
     plt.show()
-    print('....................output image saved....................')
+    print('....................segmented image saved....................')
 
 
 @main.command()
