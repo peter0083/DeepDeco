@@ -21,6 +21,7 @@ from addict import Dict
 
 from libs.models import *
 from libs.utils import DenseCRF
+from PIL import Image
 
 
 def get_device(cuda):
@@ -171,13 +172,15 @@ def single(config_path, model_path, image_path, cuda, crf):
 
     for i, label in enumerate(labels):
         mask = labelmap == label
-        ax = plt.figure(mask.astype(np.float32), alpha=0.5)
-        # ax = plt.subplot(rows, cols, i + 2)
-        # ax.set_title(classes[label])
-        # ax.imshow(raw_image[..., ::-1])
-        # ax.imshow(mask.astype(np.float32), alpha=0.5)
+
         figname = str(classes[label]) + str(i) + '.png'
-        ax.figure.savefig(figname.format(i))
+        im = Image.fromarray(mask)
+        im.save(figname)
+
+        ax = plt.subplot(rows, cols, i + 2)
+        ax.set_title(classes[label])
+        ax.imshow(raw_image[..., ::-1])
+        ax.imshow(mask.astype(np.float32), alpha=0.5)
         ax.axis("off")
 
     plt.tight_layout()
