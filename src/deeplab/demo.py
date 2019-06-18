@@ -171,11 +171,14 @@ def single(config_path, model_path, image_path, cuda, crf):
 
     for i, label in enumerate(labels):
         mask = labelmap == label
-        ax = plt.subplot(rows, cols, i + 2)
+        fig, ax = plt.subplot(rows, cols, i + 2)
         ax.set_title(classes[label])
         # ax.imshow(raw_image[..., ::-1])
-        ax.savefig(classes[label]+'.png')
         ax.imshow(mask.astype(np.float32), alpha=0.5)
+        figname = str(classes[label] + i + '.png')
+        bbox = ax[i].get_tightbbox(fig.canvas.get_renderer())
+        fig.savefig(figname.format(i),
+                    bbox_inches=bbox.transformed(fig.dpi_scale_trans.inverted()))
         ax.axis("off")
 
     plt.tight_layout()
