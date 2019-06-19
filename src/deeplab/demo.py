@@ -176,7 +176,7 @@ def single(config_path, model_path, image_path, cuda, crf):
         mask[mask == 1] = 255
 
         figname = str(classes[label]) + str(i) + '.png'
-        im = Image.fromarray(mask, mode='L')
+        im = Image.fromarray(mask, mode='1')
         im.save(figname)
 
         # ax = plt.subplot(rows, cols, i + 2)
