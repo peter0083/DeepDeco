@@ -58,65 +58,65 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 # add download for attnGAN in WK3
 
-# Part 2-1
+# Part 2
 # AttnGAN
 
 # to be added: a way to programmatically find the directory then save files
 
 print("MS AttnGAN inference")
 
-bashCommand21 = 'sudo python /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
+bashCommand2 = 'sudo python /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
               '/home/ubuntu/DeepDeco/src/attngan/code/cfg/eval_coco.yml --gpu 0 '
 print("running bash command")
 
-os.system(bashCommand21)
+os.system(bashCommand2)
 
-# Part 2-2
+# Part 3
 # Deep Lab
 
 print("DeepLab V2 segmentation: setup conda environment")
 
-bashCommand220 = 'conda env create -f configs/conda_env.yaml'
+bashCommand30 = 'conda env create -f configs/conda_env.yaml'
 
-os.system(bashCommand220)
+os.system(bashCommand30)
 
-bashCommand221 = 'conda activate deeplab-pytorch'
+bashCommand31 = 'conda activate deeplab-pytorch'
 
-os.system(bashCommand221)
+os.system(bashCommand31)
 
 print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
 
-bashCommand222 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
+bashCommand32 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
 
-os.system(bashCommand222)
+os.system(bashCommand32)
 
 print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
 
-bashCommand223 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
+bashCommand33 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
 
-os.system(bashCommand223)
+os.system(bashCommand33)
 
 print("DeepLab V2 segmentation: now segmenting image....")
 
-bashCommand224 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single' \
+bashCommand34 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single' \
                  ' -c /home/ubuntu/DeepDeco/src/deeplab/configs/coco.yaml' \
                  ' -m /home/ubuntu/DeepDeco/src/deeplab/data/models/coco/deeplabv1_resnet101/caffemodel' \
                  '/deeplabv1_resnet101-coco.pth' \
                  ' -i /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img/000000000632.jpg'
 
-os.system(bashCommand224)
+os.system(bashCommand34)
 
 print("DeepLab V2 segmentation: completed")
 
 
-# Part 2-3
+# Part 4
 # Deep photo style transfer
 
-#print("Deep photo style transfer inference")
+print("Deep photo style transfer inference")
 
-#bashCommand23 = "python /home/ubuntu/DeepDeco/src/deep_photostyle.py --content_image_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_img/000000371376.jpg " \
-#                "--style_image_path " \
-#                "/home/ubuntu/DeepDeco/src/attngan/models/coco_AttnGAN2/example_captions/0_s_0_g1.png --content_seg_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_inst/000000371376.png --style_seg_path " \
-#                " --style_option 2 "
+bashCommand4 = "python /home/ubuntu/DeepDeco/src/deep_photostyle.py --content_image_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_img/000000371376.jpg " \
+                "--style_image_path " \
+                "/home/ubuntu/DeepDeco/src/attngan/models/coco_AttnGAN2/example_captions/0_s_0_g1.png --content_seg_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_inst/000000371376.png --style_seg_path " \
+               "/home/ubuntu/DeepDeco/bed3.png --style_option 2 "
 
 
