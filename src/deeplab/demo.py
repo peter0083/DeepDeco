@@ -181,11 +181,11 @@ def single(config_path, model_path, image_path, cuda, crf):
 
         poly = mask
         rr, cc = polygon(poly[:, 1] - 1, poly[:, 0] - 1)
-        img[rr, cc] = count
+        image[rr, cc] = count
 
         count += 1
 
-        io.imsave(img)
+        io.imsave(figname, image)
 
         # ax = plt.subplot(rows, cols, i + 2)
         # ax.set_title(classes[label])
