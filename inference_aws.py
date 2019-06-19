@@ -35,11 +35,13 @@ import boto3
 
 
 def download_directory_from_s3(bucket_name,
-                               remote_directory_name):
+                               remote_directory_name,
+                               target_directory_name=None):
 
     """
     :param bucket_name: string
     :param remote_directory_name: string
+    :param target_directory_name: string  specify the directory path to save your files
     :return: local_path
     """
 
@@ -49,12 +51,17 @@ def download_directory_from_s3(bucket_name,
         if not os.path.exists(os.path.dirname(key.key)):
             os.makedirs(os.path.dirname(key.key))
         bucket.download_file(key.key, key.key)
-        print('Downloaded file with boto3 resource')
-    local_path = os.path.dirname(key.key)
+        print('Downloaded file with boto3 resource', key.key)
+    if target_directory_name is None:
+        local_path = os.path.dirname(key.key)
+    else:
+        local_path = target_directory_name
     return local_path
 
 
 download_directory_from_s3('gauganspade', 'datasets_mini')
+
+download_directory_from_s3('deepphoto', 'vgg19weight', 'home/ubuntu/DeepDeco/src/deepphoto/vgg19/')
 
 # add download for attnGAN in WK3
 
