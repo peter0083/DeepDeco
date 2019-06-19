@@ -52,10 +52,10 @@ def download_directory_from_s3(bucket_name,
             os.makedirs(os.path.dirname(key.key))
         bucket.download_file(key.key, key.key)
         print('Downloaded file with boto3 resource', key.key)
-    if target_directory_name is None:
-        local_path = os.path.dirname(key.key)
-    else:
-        local_path = target_directory_name
+        if target_directory_name is None:
+            local_path = os.path.dirname(key.key)
+        else:
+            local_path = target_directory_name
     return local_path
 
 
