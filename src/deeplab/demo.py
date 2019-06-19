@@ -173,16 +173,17 @@ def single(config_path, model_path, image_path, cuda, crf):
 
     for i, label in enumerate(labels):
         mask = labelmap == label
+        print(type(mask))
         print('-----------------shape of mask variable ', mask.shape, '-------------------')
 
         figname = str(classes[label]) + str(i) + '.png'
 
-        ax = plt.figure(dpi=100, tight_layout=True, frameon=False)
+        plt.figure(dpi=100, tight_layout=True, frameon=False)
         # ax.set_title(classes[label])
         # ax.imshow(raw_image[..., ::-1])
-        ax.imshow(mask.astype(np.float32), alpha=0.5)
+        plt.imshow(mask.astype(np.float32), alpha=0.5)
         # ax.axis("off")
-        ax.figure.save(figname)
+        plt.figure.save(figname)
 
     plt.tight_layout()
     plt.show()
