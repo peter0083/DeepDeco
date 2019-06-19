@@ -56,7 +56,8 @@ def download_directory_from_s3(bucket_name,
             local_path = os.path.dirname(key.key)
         else:
             local_path = target_directory_name
-    return local_path
+
+        return local_path
 
 
 download_directory_from_s3('gauganspade', 'datasets_mini')
