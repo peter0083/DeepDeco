@@ -60,11 +60,11 @@ args = parser.parse_args()
 
 def main():
     if args.style_option == 0:
-        best_image_bgr = stylize(args, False)
+        best_image_bgr = stylize(args, Matting=False)
         result = Image.fromarray(np.uint8(np.clip(best_image_bgr[:, :, ::-1], 0, 255.0)))
         result.save(args.output_image)
     elif args.style_option == 1:
-        best_image_bgr = stylize(args, True)
+        best_image_bgr = stylize(args, Matting=True)
         if not args.apply_smooth:
             result = Image.fromarray(np.uint8(np.clip(best_image_bgr[:, :, ::-1], 0, 255.0)))
             result.save(args.output_image)
@@ -86,12 +86,12 @@ def main():
             result.save(args.output_image)
     elif args.style_option == 2:
         args.max_iter = 2 * args.max_iter
-        tmp_image_bgr = stylize(args, False)
+        tmp_image_bgr = stylize(args, Matting=False)
         result = Image.fromarray(np.uint8(np.clip(tmp_image_bgr[:, :, ::-1], 0, 255.0)))
         args.init_image_path = os.path.join(args.serial, "tmp_result.png")
         result.save(args.init_image_path)
 
-        best_image_bgr = stylize(args, True)
+        best_image_bgr = stylize(args, Matting=True)
         if not args.apply_smooth:
             result = Image.fromarray(np.uint8(np.clip(best_image_bgr[:, :, ::-1], 0, 255.0)))
             result.save(args.output_image)
