@@ -61,10 +61,8 @@ def download_directory_from_s3(bucket_name,
 
 download_directory_from_s3('gauganspade', 'datasets_mini')
 
-s3 = boto3.resource('s3')
-s3.meta.client.download_file('deepphoto',
-                             'vgg19weight/vgg19.npy',
-                             './src/deepphoto/vgg19/vgg19.npy')
+download_directory_from_s3('deepphoto', 'vgg19weight')
+
 
 # add download for attnGAN in WK3
 
