@@ -169,7 +169,7 @@ def single(config_path, model_path, image_path, cuda, crf):
     # ax = plt.subplot(rows, cols, 1)
     # ax.set_title("Input image")
     # ax.imshow(raw_image[:, :, ::-1])
-    ax.axis("off")
+    # ax.axis("off")
 
     for i, label in enumerate(labels):
         mask = labelmap == label
