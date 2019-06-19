@@ -120,9 +120,18 @@ print("DeepLab V2 segmentation: completed")
 # Part 4
 # Deep photo style transfer
 
-print("Deep photo style transfer inference")
+# print("Deep photo style transfer inference")
 
-bashCommand40 = "sudo python /home/ubuntu/DeepDeco/src/deepphoto/deep_photostyle.py --content_image_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_img/000000371376.jpg --style_image_path /home/ubuntu/DeepDeco/0_s_0_g1.png --content_seg_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_inst/000000371376.png --style_seg_path /home/ubuntu/DeepDeco/chair10.png --style_option 2"
+#bashCommand40 = "sudo python /home/ubuntu/DeepDeco/src/deepphoto/deep_photostyle.py --content_image_path " \
+#                "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_img/000000371376.jpg --style_image_path " \
+#                "/home/ubuntu/DeepDeco/0_s_0_g1.png --content_seg_path " \
+#                "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_inst/000000371376.png --style_seg_path " \
+#                "/home/ubuntu/DeepDeco/chair10.png --style_option 2 "
 
-os.system(bashCommand40)
+# os.system(bashCommand40)
 
+print("SPADE inference")
+
+bashCommand50 = "sudo python /home/ubuntu/DeepDeco/src/gaugan/test.py --name coco_pretrained --dataset_mode coco --dataroot /home/ubuntu/DeepDeco/chair10.png"
+
+os.system(bashCommand50)
