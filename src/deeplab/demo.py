@@ -183,7 +183,7 @@ def single(config_path, model_path, image_path, cuda, crf):
         # ax.imshow(raw_image[..., ::-1])
         plt.imshow(mask.astype(np.float32), alpha=0.5)
         # ax.axis("off")
-        plt.figure.save(figname)
+        plt.savefig(figname)
 
     plt.tight_layout()
     plt.show()
