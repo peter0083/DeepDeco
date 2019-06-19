@@ -114,10 +114,10 @@ print("DeepLab V2 segmentation: completed")
 
 print("Deep photo style transfer inference")
 
-#bashCommand40 = "python /home/ubuntu/DeepDeco/src/deep_photostyle.py --content_image_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_img/000000371376.jpg " \
-#                "--style_image_path " \
-#                "/home/ubuntu/DeepDeco/0_s_0_g1.png --content_seg_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_inst/000000371376.png --style_seg_path " \
-#               " --style_option 2 "
+bashCommand40 = "python /home/ubuntu/DeepDeco/src/deep_photostyle.py --content_image_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_img/000000371376.jpg " \
+                "--style_image_path " \
+                "/home/ubuntu/DeepDeco/0_s_0_g1.png --content_seg_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_inst/000000371376.png --style_seg_path " \
+               "/home/ubuntu/DeepDeco/chair10.png --style_option 2 "
 
-#os.system(bashCommand40)
+os.system(bashCommand40)
 
