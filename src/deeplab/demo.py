@@ -165,7 +165,7 @@ def single(config_path, model_path, image_path, cuda, crf):
     rows = np.floor(np.sqrt(len(labels) + 1))
     cols = np.ceil((len(labels) + 1) / rows)
 
-    plt.figure(figsize=(10, 10))
+    # plt.figure(figsize=(10, 10))
     # ax = plt.subplot(rows, cols, 1)
     # ax.set_title("Input image")
     # ax.imshow(raw_image[:, :, ::-1])
@@ -177,7 +177,7 @@ def single(config_path, model_path, image_path, cuda, crf):
 
         figname = str(classes[label]) + str(i) + '.png'
 
-        ax = plt.plot()
+        ax = plt.figure(dpi=100, tight_layout=True, frameon=False)
         # ax.set_title(classes[label])
         # ax.imshow(raw_image[..., ::-1])
         ax.imshow(mask.astype(np.float32), alpha=0.5)
