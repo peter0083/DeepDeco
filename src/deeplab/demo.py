@@ -21,7 +21,8 @@ from addict import Dict
 
 from libs.models import *
 from libs.utils import DenseCRF
-from PIL import Image
+import skimage.io as io
+from skimage.draw import polygon
 
 
 def get_device(cuda):
@@ -170,14 +171,22 @@ def single(config_path, model_path, image_path, cuda, crf):
     ax.imshow(raw_image[:, :, ::-1])
     ax.axis("off")
 
+    count = 0
+
     for i, label in enumerate(labels):
         mask = labelmap == label
         print('-----------------shape of mask variable ', mask.shape, '-------------------')
         mask[mask == 1] = 255
 
         figname = str(classes[label]) + str(i) + '.png'
-        im = Image.fromarray(mask, mode='1')
-        im.save(figname)
+
+        poly = np.array(mask).reshape((int(len(mask) / 2), 2))
+        rr, cc = polygon(poly[:, 1] - 1, poly[:, 0] - 1)
+        img[rr, cc] = count
+
+        count += 1
+
+        io.imsave(img)
 
         # ax = plt.subplot(rows, cols, i + 2)
         # ax.set_title(classes[label])
