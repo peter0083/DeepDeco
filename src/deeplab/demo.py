@@ -177,7 +177,7 @@ def single(config_path, model_path, image_path, cuda, crf):
 
         figname = str(classes[label]) + str(i) + '.png'
 
-        # ax = plt.subplot(rows, cols, i + 2)
+        ax = plt.plot()
         ax.set_title(classes[label])
         # ax.imshow(raw_image[..., ::-1])
         ax.imshow(mask.astype(np.float32), alpha=0.5)
