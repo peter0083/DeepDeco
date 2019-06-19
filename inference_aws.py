@@ -62,7 +62,7 @@ def download_directory_from_s3(bucket_name,
 download_directory_from_s3('gauganspade', 'datasets_mini')
 
 s3 = boto3.resource('s3')
-s3.Bucket('deepphoto').download_file('s3://deepphoto/vgg19weight/vgg19.npy',
+s3.Bucket('deepphoto').download_file('vgg19weight/vgg19.npy',
                                      'home/ubuntu/DeepDeco/src/deepphoto/vgg19/vgg19.npy')
 
 # add download for attnGAN in WK3
