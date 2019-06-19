@@ -65,11 +65,11 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 print("MS AttnGAN inference")
 
-bashCommand2 = 'sudo python /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
+bashCommand20 = 'sudo python /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
               '/home/ubuntu/DeepDeco/src/attngan/code/cfg/eval_coco.yml --gpu 0 '
 print("running bash command")
 
-os.system(bashCommand2)
+os.system(bashCommand20)
 
 # Part 3
 # Deep Lab
@@ -102,7 +102,7 @@ bashCommand34 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single' \
                  ' -c /home/ubuntu/DeepDeco/src/deeplab/configs/coco.yaml' \
                  ' -m /home/ubuntu/DeepDeco/src/deeplab/data/models/coco/deeplabv1_resnet101/caffemodel' \
                  '/deeplabv1_resnet101-coco.pth' \
-                 ' -i /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img/000000000632.jpg'
+                 ' -i /home/ubuntu/DeepDeco/0_s_0_g1.png'
 
 os.system(bashCommand34)
 
@@ -114,9 +114,10 @@ print("DeepLab V2 segmentation: completed")
 
 print("Deep photo style transfer inference")
 
-bashCommand4 = "python /home/ubuntu/DeepDeco/src/deep_photostyle.py --content_image_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_img/000000371376.jpg " \
-                "--style_image_path " \
-                "/home/ubuntu/DeepDeco/src/attngan/models/coco_AttnGAN2/example_captions/0_s_0_g1.png --content_seg_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_inst/000000371376.png --style_seg_path " \
-               "/home/ubuntu/DeepDeco/bed3.png --style_option 2 "
+#bashCommand40 = "python /home/ubuntu/DeepDeco/src/deep_photostyle.py --content_image_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_img/000000371376.jpg " \
+#                "--style_image_path " \
+#                "/home/ubuntu/DeepDeco/0_s_0_g1.png --content_seg_path /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/train_inst/000000371376.png --style_seg_path " \
+#               " --style_option 2 "
 
+#os.system(bashCommand40)
 
