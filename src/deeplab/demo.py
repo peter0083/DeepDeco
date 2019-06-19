@@ -166,12 +166,10 @@ def single(config_path, model_path, image_path, cuda, crf):
     cols = np.ceil((len(labels) + 1) / rows)
 
     plt.figure(figsize=(10, 10))
-    ax = plt.subplot(rows, cols, 1)
-    ax.set_title("Input image")
-    ax.imshow(raw_image[:, :, ::-1])
+    # ax = plt.subplot(rows, cols, 1)
+    # ax.set_title("Input image")
+    # ax.imshow(raw_image[:, :, ::-1])
     ax.axis("off")
-
-    count = 0
 
     for i, label in enumerate(labels):
         mask = labelmap == label
@@ -179,19 +177,12 @@ def single(config_path, model_path, image_path, cuda, crf):
 
         figname = str(classes[label]) + str(i) + '.png'
 
-        poly = mask
-        rr, cc = polygon(poly[:, 1] - 1, poly[:, 0] - 1)
-        image[rr, cc] = count
-
-        count += 1
-
-        io.imsave(figname, image)
-
         # ax = plt.subplot(rows, cols, i + 2)
-        # ax.set_title(classes[label])
+        ax.set_title(classes[label])
         # ax.imshow(raw_image[..., ::-1])
-        # ax.imshow(mask.astype(np.float32), alpha=0.5)
+        ax.imshow(mask.astype(np.float32), alpha=0.5)
         # ax.axis("off")
+        ax.figure.save(figname)
 
     plt.tight_layout()
     plt.show()
