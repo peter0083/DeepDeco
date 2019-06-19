@@ -176,11 +176,10 @@ def single(config_path, model_path, image_path, cuda, crf):
     for i, label in enumerate(labels):
         mask = labelmap == label
         print('-----------------shape of mask variable ', mask.shape, '-------------------')
-        mask[mask == 1] = 255
 
         figname = str(classes[label]) + str(i) + '.png'
 
-        poly = np.array(mask).reshape((int(len(mask) / 2), 2))
+        poly = mask
         rr, cc = polygon(poly[:, 1] - 1, poly[:, 0] - 1)
         img[rr, cc] = count
 
