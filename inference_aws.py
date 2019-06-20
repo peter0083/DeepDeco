@@ -56,7 +56,7 @@ def download_directory_from_s3(bucket_name,
 
 download_directory_from_s3('gauganspade', 'datasets_mini')
 
-download_directory_from_s3('deepphoto', 'vgg19weight')
+# need a separate command to download vgg19 weight from S3
 
 
 # add download for attnGAN in WK3
