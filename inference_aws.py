@@ -127,6 +127,6 @@ print("DeepLab V2 segmentation: completed")
 
 print("SPADE inference")
 
-bashCommand50 = "sudo python /home/ubuntu/DeepDeco/src/gaugan/test.py --name coco_pretrained --dataset_mode coco --dataroot /home/ubuntu/DeepDeco/chair10.png"
+bashCommand50 = "sudo python /home/ubuntu/DeepDeco/src/gaugan/test.py --name coco_pretrained --dataset_mode coco --dataroot /home/ubuntu/DeepDeco/datasets_mini/coco_stuff"
 
 os.system(bashCommand50)
