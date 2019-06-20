@@ -120,8 +120,8 @@ print("Deep photo style transfer inference")
 bashCommand40 = "sudo python /home/ubuntu/DeepDeco/src/deepphoto/deep_photostyle.py --content_image_path " \
                 "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img/000000000632.jpg --style_image_path " \
                 "/home/ubuntu/DeepDeco/0_s_0_g1.png --content_seg_path " \
-                "/home/ubuntu/DeepDeco/bed3_input.png --style_seg_path " \
-                "/home/ubuntu/DeepDeco/chair10.png --style_option 2 "
+                "/home/ubuntu/DeepDeco/bed3_inputbb.png --style_seg_path " \
+                "/home/ubuntu/DeepDeco/chair10_tarbb.png --style_option 2 "
 
 os.system(bashCommand40)
 
