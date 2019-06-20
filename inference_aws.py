@@ -49,14 +49,14 @@ def download_directory_from_s3(bucket_name,
         if not os.path.exists(os.path.dirname(key.key)):
             os.makedirs(os.path.dirname(key.key))
         bucket.download_file(key.key, key.key)
-        print('Downloaded file with boto3 resource', key.key)
+        print('Downloaded file with boto3 resource')
     local_path = os.path.dirname(key.key)
     return local_path
 
 
 download_directory_from_s3('gauganspade', 'datasets_mini')
 
-download_directory_from_s3('deepphoto', '.vgg19weight')
+download_directory_from_s3('deepphoto', 'vgg19weight')
 
 
 # add download for attnGAN in WK3
