@@ -2,12 +2,12 @@ CONFIG_NAME: 'glu-gan2'
 
 DATASET_NAME: 'coco'
 DATA_DIR: '/home/ubuntu/DeepDeco/src/attngan/data/coco/'
-GPU_ID: 0
-WORKERS: 4
+GPU_ID: 3
+WORKERS: 1
 
 
 TREE:
-    BRANCH_NUM: 1
+    BRANCH_NUM: 3
 
 
 TRAIN:
