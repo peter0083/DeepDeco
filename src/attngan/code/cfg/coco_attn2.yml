@@ -7,7 +7,7 @@ WORKERS: 4
 
 
 TREE:
-    BRANCH_NUM: 3
+    BRANCH_NUM: 1
 
 
 TRAIN:
