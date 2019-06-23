@@ -92,11 +92,6 @@ def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
     soft_config.gpu_options.allow_growth = True
     with g.as_default(), g.device(device_t), tf.Session(config=soft_config) as sess:
 
-        # to fix error 'tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized
-        # value Variable_47'
-        # sess.run(tf.global_variables_initializer())
-        # sess.run(tf.local_variables_initializer())
-
         batch_shape = (batch_size,) + img_shape
         img_placeholder = tf.placeholder(tf.float32, shape=batch_shape,
                                          name='img_placeholder')
@@ -133,6 +128,11 @@ def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
                     X[j] = img
             else:
                 X = data_in[pos:pos+batch_size]
+
+            # to fix error 'tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized
+            # value Variable_47'
+            sess.run(tf.global_variables_initializer())
+            sess.run(tf.local_variables_initializer())
 
             _preds = sess.run(preds, feed_dict={img_placeholder:X})
             for j, path_out in enumerate(curr_batch_out):
