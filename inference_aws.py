@@ -95,7 +95,7 @@ bashCommand34 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single' \
                  ' -c /home/ubuntu/DeepDeco/src/deeplab/configs/coco.yaml' \
                  ' -m /home/ubuntu/DeepDeco/src/deeplab/data/models/coco/deeplabv1_resnet101/caffemodel' \
                  '/deeplabv1_resnet101-coco.pth' \
-                 ' -i /home/ubuntu/DeepDeco/ikea_vimle_series_sketch.jpg'
+                 ' -i /home/ubuntu/DeepDeco/jeans.jpg'
 
 os.system(bashCommand34)
 
