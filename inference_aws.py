@@ -107,7 +107,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 print("Fast deep photo style transfer inference")
 
-bashCommand40 = "sudo python /home/ubuntu/DeepDeco/ftdeepphoto/run_fpst.py --in-path " \
+bashCommand40 = "sudo python /home/ubuntu/DeepDeco/src/ftdeepphoto/run_fpst.py --in-path " \
                 "/home/ubuntu/DeepDeco/ikea_vimle_series_sketch.jpg  " \
                 "--style-path " \
                 "/home/ubuntu/DeepDeco/jeans.jpeg --checkpoint-path checkpoints --out-path " \
