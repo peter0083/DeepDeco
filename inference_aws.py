@@ -103,15 +103,16 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 
 # Part 4
-# Deep photo style transfer
+# Fast deep photo style transfer
 
-print("Deep photo style transfer inference")
+print("Fast deep photo style transfer inference")
 
-bashCommand40 = "sudo python /home/ubuntu/DeepDeco/src/deepphoto/deep_photostyle.py --content_image_path " \
-                "/home/ubuntu/DeepDeco/ikea_vimle_series_sketch.jpg --style_image_path " \
-                "/home/ubuntu/DeepDeco/jeans.jpeg --content_seg_path " \
-                "/home/ubuntu/DeepDeco/vimle_background_segment.png --style_seg_path " \
-                "/home/ubuntu/DeepDeco/jeans_style_segment.png --style_option 2 "
+
+bashCommand40 = "python run_fpst.py --in-path /home/ubuntu/DeepDeco/ikea_vimle_series_sketch.jpg  --style-path " \
+                "/home/ubuntu/DeepDeco/jeans.jpeg --checkpoint-path checkpoints --out-path " \
+                "output/output_stylized_image.jpg --deeplab-path " \
+                "deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --batch-size 1 --slow "
+
 
 os.system(bashCommand40)
 
