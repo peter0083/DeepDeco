@@ -18,6 +18,10 @@ import numpy
 from moviepy.video.io.VideoFileClip import VideoFileClip
 import moviepy.video.io.ffmpeg_writer as ffmpeg_writer
 
+# to fix error 'tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized
+# value Variable_47'
+init = tf.global_variables_initializer()
+sess.run(init)
 
 def ffwd_video(path_in, path_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
     video_clip = VideoFileClip(path_in, audio=False)
@@ -96,7 +100,7 @@ def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
         if os.path.isdir(checkpoint_dir):
             ckpt = tf.train.get_checkpoint_state(checkpoint_dir)
             if ckpt:
-                saver.restore(sess)
+                saver.restore(sess, ckpt)
             else:
                 os.makedirs("fst_checkpoints", exist_ok=True)
                 ckpt = os.path.dirname("fst_checkpoints")
