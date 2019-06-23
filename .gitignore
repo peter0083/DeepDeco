@@ -10,3 +10,4 @@ __pycache__/
 *.xml
 vgg19weight/
 *.npy
+*.env
