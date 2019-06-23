@@ -29,8 +29,7 @@ def ffwd_video(path_in, path_out, checkpoint_dir, device_t='/gpu:0', batch_size=
     g = tf.Graph()
     soft_config = tf.ConfigProto(allow_soft_placement=True)
     soft_config.gpu_options.allow_growth = True
-    with g.as_default(), g.device(device_t), \
-            tf.Session(config=soft_config) as sess:
+    with g.as_default(), g.device(device_t), tf.Session(config=soft_config) as sess:
 
         # to fix error 'tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized
         # value Variable_47'
@@ -91,8 +90,7 @@ def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
     curr_num = 0
     soft_config = tf.ConfigProto(allow_soft_placement=True)
     soft_config.gpu_options.allow_growth = True
-    with g.as_default(), g.device(device_t), \
-            tf.Session(config=soft_config) as sess:
+    with g.as_default(), g.device(device_t), tf.Session(config=soft_config) as sess:
 
         # to fix error 'tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized
         # value Variable_47'
