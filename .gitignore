@@ -8,3 +8,6 @@ __pycache__/
 *.pyc
 *.iml
 *.xml
+vgg19weight/
+*.npy
+*.env
