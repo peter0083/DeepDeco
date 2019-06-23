@@ -20,6 +20,7 @@ gcc7
 pycuda
 ffmpeg
 moviepy
+numpy>=1.14.5
 
 # deeplab
 addict
