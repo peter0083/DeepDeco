@@ -98,7 +98,7 @@ def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
             if ckpt:
                 saver.restore(sess)
             else:
-                os.mkdirs("fst_checkpoints", exist_ok=True):
+                os.mkdirs("fst_checkpoints", exist_ok=True)
                 ckpt = os.path.dirname("fst_checkpoints")
                 print(ckpt, "variable ckpt status")
                 print("...model checkpoints directory created...")
