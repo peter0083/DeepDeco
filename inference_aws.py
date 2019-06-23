@@ -102,6 +102,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 # print("DeepLab V2 segmentation: completed")
 
 
+
 # Part 4
 # Fast deep photo style transfer
 
@@ -115,3 +116,4 @@ bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
                 "deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --batch-size 4"
 
 os.system(bashCommand40)
+
