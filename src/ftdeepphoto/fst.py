@@ -98,10 +98,11 @@ def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
             if ckpt and ckpt.model_checkpoint_path:
                 saver.restore(sess, ckpt.model_checkpoint_path)
             else:
-                # ckpt = os.makedirs(os.path.dirname("checkpoints"))
-                # print(ckpt.model_checkpoint_path, "variable ckpt.model_checkpoint_path status")
+                ckpt.model_checkpoint_path = os.makedirs(os.path.dirname("checkpoints"))
+                ckpt = os.makedirs(os.path.dirname("checkpoints"))
+                print(ckpt.model_checkpoint_path, "variable ckpt.model_checkpoint_path status")
                 print(ckpt, "variable ckpt status")
-                raise Exception("No checkpoint found...")
+                print("...model checkpoints directory created...")
         else:
             saver.restore(sess, checkpoint_dir)
 
