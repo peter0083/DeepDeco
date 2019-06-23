@@ -67,51 +67,51 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 # Part 3
 # Deep Lab
 
-print("DeepLab V2 segmentation: setup conda environment")
-
-bashCommand30 = 'conda env create -f configs/conda_env.yaml'
-
-os.system(bashCommand30)
-
-bashCommand31 = 'conda activate deeplab-pytorch'
-
-os.system(bashCommand31)
-
-print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
-
-bashCommand32 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
-
-os.system(bashCommand32)
-
-print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
-
-bashCommand33 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
-
-os.system(bashCommand33)
-
-print("DeepLab V2 segmentation: now segmenting image....")
-
-bashCommand34 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single' \
-                 ' -c /home/ubuntu/DeepDeco/src/deeplab/configs/coco.yaml' \
-                 ' -m /home/ubuntu/DeepDeco/src/deeplab/data/models/coco/deeplabv1_resnet101/caffemodel' \
-                 '/deeplabv1_resnet101-coco.pth' \
-                 ' -i /home/ubuntu/DeepDeco/jeans.jpg'
-
-os.system(bashCommand34)
-
-print("DeepLab V2 segmentation: completed")
+# print("DeepLab V2 segmentation: setup conda environment")
+#
+# bashCommand30 = 'conda env create -f configs/conda_env.yaml'
+#
+# os.system(bashCommand30)
+#
+# bashCommand31 = 'conda activate deeplab-pytorch'
+#
+# os.system(bashCommand31)
+#
+# print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
+#
+# bashCommand32 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
+#
+# os.system(bashCommand32)
+#
+# print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
+#
+# bashCommand33 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
+#
+# os.system(bashCommand33)
+#
+# print("DeepLab V2 segmentation: now segmenting image....")
+#
+# bashCommand34 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single' \
+#                  ' -c /home/ubuntu/DeepDeco/src/deeplab/configs/coco.yaml' \
+#                  ' -m /home/ubuntu/DeepDeco/src/deeplab/data/models/coco/deeplabv1_resnet101/caffemodel' \
+#                  '/deeplabv1_resnet101-coco.pth' \
+#                  ' -i /home/ubuntu/DeepDeco/jeans.jpg'
+#
+# os.system(bashCommand34)
+#
+# print("DeepLab V2 segmentation: completed")
 
 
 # Part 4
 # Deep photo style transfer
 
-# print("Deep photo style transfer inference")
+print("Deep photo style transfer inference")
 
-# bashCommand40 = "sudo python /home/ubuntu/DeepDeco/src/deepphoto/deep_photostyle.py --content_image_path " \
-#                 "/home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img/000000000632.jpg --style_image_path " \
-#                 "/home/ubuntu/DeepDeco/0_s_0_g1.png --content_seg_path " \
-#                 "/home/ubuntu/DeepDeco/bed3_inputbb.png --style_seg_path " \
-#                 "/home/ubuntu/DeepDeco/chair10_tarbb.png --style_option 2 "
-#
-# os.system(bashCommand40)
+bashCommand40 = "sudo python /home/ubuntu/DeepDeco/src/deepphoto/deep_photostyle.py --content_image_path " \
+                "/home/ubuntu/DeepDeco/ikea_vimle_series_sketch.jpg --style_image_path " \
+                "/home/ubuntu/DeepDeco/jeans.jpeg --content_seg_path " \
+                "/home/ubuntu/DeepDeco/vimle_background_segment.png --style_seg_path " \
+                "/home/ubuntu/DeepDeco/jeans_style_segment.png --style_option 2 "
+
+os.system(bashCommand40)
 
