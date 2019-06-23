@@ -40,6 +40,8 @@ pip install -r requirements
 
 ## Run Inference
 
+in `ftdeepphoto/resizedPhotos`, put the content image
+
 ## Reference
 
 ## hardcoded filepath that needs to fix
