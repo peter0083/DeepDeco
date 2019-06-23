@@ -98,6 +98,8 @@ def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
             if ckpt and ckpt.model_checkpoint_path:
                 saver.restore(sess, ckpt.model_checkpoint_path)
             else:
+                print(ckpt.model_checkpoint_path, "variable ckpt.model_checkpoint_path status")
+                print(ckpt, "variable ckpt status")
                 raise Exception("No checkpoint found...")
         else:
             saver.restore(sess, checkpoint_dir)
