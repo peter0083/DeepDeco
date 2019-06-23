@@ -39,8 +39,8 @@ def ffwd_video(path_in, path_out, checkpoint_dir, device_t='/gpu:0', batch_size=
         saver = tf.train.Saver()
         if os.path.isdir(checkpoint_dir):
             ckpt = tf.train.get_checkpoint_state(checkpoint_dir)
-            if ckpt and ckpt.model_checkpoint_path:
-                saver.restore(sess, ckpt.model_checkpoint_path)
+            if ckpt :
+                saver.restore(sess, ckpt)
             else:
                 raise Exception("No checkpoint found...")
         else:
@@ -95,10 +95,11 @@ def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
         saver = tf.train.Saver()
         if os.path.isdir(checkpoint_dir):
             ckpt = tf.train.get_checkpoint_state(checkpoint_dir)
-            if ckpt and ckpt.model_checkpoint_path:
-                saver.restore(sess, ckpt.model_checkpoint_path)
+            if ckpt:
+                saver.restore(sess)
             else:
-                os.makedirs("fst_checkpoints")
+                if not os.path.exists(os.path.dirname("fst_checkpoints")):
+                    os.makedirs("fst_checkpoints")
                 ckpt = os.path.dirname("fst_checkpoints")
                 print(ckpt, "variable ckpt status")
                 print("...model checkpoints directory created...")
