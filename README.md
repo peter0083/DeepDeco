@@ -40,7 +40,7 @@ pip install -r requirements
 
 ## Run Inference
 
-in `ftdeepphoto/resizedPhotos`, put the content image
+in `ftdeepphoto/resizedPhotos`, put the content image 
 
 ## Reference
 
