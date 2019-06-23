@@ -26,6 +26,7 @@
 import os
 import boto3
 
+
 # Part 1
 # download data from S3
 
@@ -36,7 +37,6 @@ import boto3
 
 def download_directory_from_s3(bucket_name,
                                remote_directory_name):
-
     """
     :param bucket_name: string
     :param remote_directory_name: string
@@ -107,12 +107,10 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 
 print("Fast deep photo style transfer inference")
 
-
-bashCommand40 = "sudo python ftdeephoto/run_fpst.py --in-path /home/ubuntu/DeepDeco/ikea_vimle_series_sketch.jpg  --style-path " \
+bashCommand40 = "sudo python ftdeepphoto/run_fpst.py --in-path /home/ubuntu/DeepDeco/ikea_vimle_series_sketch.jpg  " \
+                "--style-path " \
                 "/home/ubuntu/DeepDeco/jeans.jpeg --checkpoint-path checkpoints --out-path " \
                 "output/output_stylized_image.jpg --deeplab-path " \
-                "deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --batch-size 4 --slow"
-
+                "deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --batch-size 4 --slow False"
 
 os.system(bashCommand40)
-
