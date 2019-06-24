@@ -31,11 +31,6 @@ def ffwd_video(path_in, path_out, checkpoint_dir, device_t='/gpu:0', batch_size=
     soft_config.gpu_options.allow_growth = True
     with g.as_default(), g.device(device_t), tf.Session(config=soft_config) as sess:
 
-        # to fix error 'tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized
-        # value Variable_47'
-        # sess.run(tf.global_variables_initializer())
-        # sess.run(tf.local_variables_initializer())
-
         batch_shape = (batch_size, video_clip.size[1], video_clip.size[0], 3)
         img_placeholder = tf.placeholder(tf.float32, shape=batch_shape,
                                          name='img_placeholder')
@@ -56,6 +51,12 @@ def ffwd_video(path_in, path_out, checkpoint_dir, device_t='/gpu:0', batch_size=
         def style_and_write(count):
             for i in range(count, batch_size):
                 X[i] = X[count - 1]  # Use last frame to fill X
+
+            # to fix error 'tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized
+            # value Variable_47'
+            sess.run(tf.global_variables_initializer())
+            sess.run(tf.local_variables_initializer())
+
             _preds = sess.run(preds, feed_dict={img_placeholder: X})
             for i in range(0, count):
                 video_writer.write_frame(np.clip(_preds[i], 0, 255).astype(np.uint8))
