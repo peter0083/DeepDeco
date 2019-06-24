@@ -131,7 +131,7 @@ def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
 
             # to fix error 'tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized
             # value Variable_47'
-            sess.run(tf.global_variables_initializer())
+            sess.run(tf.compat.v1.global_variables_initializer())
             sess.run(tf.local_variables_initializer())
 
             _preds = sess.run(preds, feed_dict={img_placeholder:X})
