@@ -16,13 +16,13 @@
           display_winsize: 256                           
                  gan_mode: hinge                         
                   gpu_ids: 0                             
-                image_dir: /Users/peterlin/DeepDeco/dataset/datasets_mini copy/coco_stuff/val_img	[default: None]
+                image_dir: /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_img	[default: None]
                 init_type: xavier                        
             init_variance: 0.02                          
              instance_dir:                               
                   isTrain: True                          	[default: None]
-                label_dir: /Users/peterlin/DeepDeco/datasets_mini copy/coco_stuff/val_label	[default: None]
-                 label_nc: 171                           	[default: 13]
+                label_dir: /home/ubuntu/DeepDeco/datasets_mini/coco_stuff/val_label	[default: None]
+                 label_nc: 13                            
               lambda_feat: 10.0                          
                lambda_kld: 0.05                          
                lambda_vgg: 10.0                          
@@ -46,7 +46,7 @@
                   no_flip: False                         
           no_ganFeat_loss: False                         
                   no_html: False                         
-              no_instance: False                         
+              no_instance: True                          	[default: False]
          no_pairing_check: False                         
               no_vgg_loss: False                         
                    norm_D: spectralinstance              

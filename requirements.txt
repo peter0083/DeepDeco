@@ -1,11 +1,23 @@
-# gaugan
-torch>=1.1.0
-torchvision
-dominate>=2.3.1
-dill
-scikit-image>=0.15.0
-python-dateutil
-easydict
-pandas
-torchfile
-nltk
+# fast deep style transfer
+tensorflow
+tensorflow-gputen
+pillow
+gcc7
+pycuda
+ffmpeg
+moviepy
+numpy=1.16.1
+# numpy=1.16.1 has allow_pickle=True as default
+
+# deeplab
+addict
+opencv
+pydensecrf
+
+# docker
+click
+Sphinx
+coverage
+awscli
+flake8
+python-dotenv>=0.5.1
