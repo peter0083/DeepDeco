@@ -112,8 +112,8 @@ bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
                 "ikea_vimle_series_sketch.jpg " \
                 "--style-path " \
                 "jeans.jpeg --checkpoint-path checkpoints/ --out-path " \
-                "output/output_stylized_image.jpg --deeplab-path " \
-                "deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz"
+                "output/output_stylized_image2.jpg --deeplab-path " \
+                "deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow True"
 
 os.system(bashCommand40)
 
