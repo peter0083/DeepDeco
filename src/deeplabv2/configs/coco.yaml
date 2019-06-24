@@ -1,11 +1,11 @@
 EXP:
     ID: coco
-    OUTPUT_DIR: /home/ubuntu/DeepDeco/src/deeplab/data
+    OUTPUT_DIR: /home/ubuntu/DeepDeco/src/deeplabv2/data
 
 DATASET:
     NAME: coco
     ROOT:
-    LABELS: /home/ubuntu/DeepDeco/src/deeplab/data/datasets/coco/labels.txt
+    LABELS: /home/ubuntu/DeepDeco/src/deeplabv2/data/datasets/coco/labels.txt
     N_CLASSES: 91
     IGNORE_LABEL:
     SCALES:

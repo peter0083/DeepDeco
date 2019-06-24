@@ -73,27 +73,27 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 #
 # os.system(bashCommand30)
 #
-# bashCommand31 = 'conda activate deeplab-pytorch'
+# bashCommand31 = 'conda activate deeplabv2-pytorch'
 #
 # os.system(bashCommand31)
 #
 # print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
 #
-# bashCommand32 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplab/scripts/setup_caffemodels.sh'
+# bashCommand32 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplabv2/scripts/setup_caffemodels.sh'
 #
 # os.system(bashCommand32)
 #
 # print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
 #
-# bashCommand33 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/convert.py --dataset coco'
+# bashCommand33 = 'sudo python /home/ubuntu/DeepDeco/src/deeplabv2/convert.py --dataset coco'
 #
 # os.system(bashCommand33)
 #
 # print("DeepLab V2 segmentation: now segmenting image....")
 #
-# bashCommand34 = 'sudo python /home/ubuntu/DeepDeco/src/deeplab/demo.py single' \
-#                  ' -c /home/ubuntu/DeepDeco/src/deeplab/configs/coco.yaml' \
-#                  ' -m /home/ubuntu/DeepDeco/src/deeplab/data/models/coco/deeplabv1_resnet101/caffemodel' \
+# bashCommand34 = 'sudo python /home/ubuntu/DeepDeco/src/deeplabv2/demo.py single' \
+#                  ' -c /home/ubuntu/DeepDeco/src/deeplabv2/configs/coco.yaml' \
+#                  ' -m /home/ubuntu/DeepDeco/src/deeplabv2/data/models/coco/deeplabv1_resnet101/caffemodel' \
 #                  '/deeplabv1_resnet101-coco.pth' \
 #                  ' -i /home/ubuntu/DeepDeco/jeans.jpg'
 #
@@ -113,7 +113,7 @@ bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
                 "--style-path " \
                 "jeans.jpeg --checkpoint-path checkpoints/ --out-path " \
                 "output/output_stylized_image2.jpg --deeplab-path " \
-                "deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
+                "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
 
 os.system(bashCommand40)
 

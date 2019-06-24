@@ -23,7 +23,7 @@ from libs.models import DeepLabV1_ResNet101, DeepLabV2_ResNet101_MSC
 def parse_caffemodel(model_path):
 
     # have to hardcode model_path at wk3
-    model_path = '/home/ubuntu/DeepDeco/src/deeplab/data/models/coco/deeplabv1_resnet101/caffemodel/init.caffemodel'
+    model_path = '/home/ubuntu/DeepDeco/src/deeplabv2/data/models/coco/deeplabv1_resnet101/caffemodel/init.caffemodel'
     caffemodel = caffe_pb2.NetParameter()
     with open(model_path, "rb") as f:
         caffemodel.MergeFromString(f.read())
@@ -249,7 +249,7 @@ def main(dataset):
     model.load_state_dict(converted_state_dict)
 
     print('Saving to "{}"'.format(CONFIG.PATH_PYTORCH_MODEL))
-    torch.save(converted_state_dict, '/home/ubuntu/DeepDeco/src/deeplab/' + CONFIG.PATH_PYTORCH_MODEL)
+    torch.save(converted_state_dict, '/home/ubuntu/DeepDeco/src/deeplabv2/' + CONFIG.PATH_PYTORCH_MODEL)
 
 
 if __name__ == "__main__":

@@ -34,7 +34,7 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 
 # Set up the working environment.
 CURRENT_DIR=$(pwd)
-WORK_DIR="${CURRENT_DIR}/deeplab"
+WORK_DIR="${CURRENT_DIR}/deeplabv2"
 
 # Run model_test first to make sure the PYTHONPATH is correctly set.
 python "${WORK_DIR}"/model_test.py -v
