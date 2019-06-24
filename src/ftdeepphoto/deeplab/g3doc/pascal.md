@@ -9,7 +9,7 @@ We have prepared the script (under the folder `datasets`) to download and
 convert PASCAL VOC 2012 semantic segmentation dataset to TFRecord.
 
 ```bash
-# From the tensorflow/models/research/deeplab/datasets directory.
+deeplabv2
 sh download_and_convert_voc2012.sh
 ```
 
