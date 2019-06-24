@@ -147,11 +147,11 @@ def main():
         # Now call slow deep photo style transfer
         # From Louie Yang's github with minor modifications:
         # https://github.com/LouieYang/deep-photo-styletransfer-tf
-        cmd = ['python', '-m', 'cProfile', '-o', 'deepPhotoProfile_Adams' \
-        , 'deep-photo-styletransfer-tf/deep_photostyle.py', '--content_image_path' \
-        , opts.resized_path, '--style_image_path', opts.resized_style_path \
-        , '--content_seg_path', opts.seg_path, '--style_seg_path', opts.seg_style_path \
-        , '--style_option', '2', '--output_image', opts.out_path \
+        cmd = ['python', '-m', 'cProfile', '-o', 'deepPhotoProfile_Adams'
+        , '/home/ubuntu/DeepDeco/src/ftdeepphoto/deep-photo-styletransfer-tf/deep_photostyle.py', '--content_image_path'
+        , opts.resized_path, '--style_image_path', opts.resized_style_path
+        , '--content_seg_path', opts.seg_path, '--style_seg_path', opts.seg_style_path
+        , '--style_option', '2', '--output_image', opts.out_path
         , '--max_iter', '10000', '--save_iter', '100', '--lbfgs']
         print(cmd)
         call(cmd)
