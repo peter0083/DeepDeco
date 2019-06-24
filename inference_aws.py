@@ -3,7 +3,7 @@
 # to generate an image based on
 # the following inputs
 # 1. a text description of the object (MS AttnGAN)
-# 2. a outline image of an object (Nvidia GauGan)
+# 2. a outline image of an object (Nvidia GauGAN)
 
 # to run this script on AWS Linux Set up the data folder to contain four things:
 #
@@ -26,6 +26,7 @@
 import os
 import boto3
 
+
 # Part 1
 # download data from S3
 
@@ -36,7 +37,6 @@ import boto3
 
 def download_directory_from_s3(bucket_name,
                                remote_directory_name):
-
     """
     :param bucket_name: string
     :param remote_directory_name: string
@@ -56,23 +56,64 @@ def download_directory_from_s3(bucket_name,
 
 download_directory_from_s3('gauganspade', 'datasets_mini')
 
+# need a separate command to download vgg19 weight from S3
+
+
 # add download for attnGAN in WK3
 
-# Part 2-1
-# AttnGAN
+# Part 2
+# image similarity search
 
-# to be added: a way to programmatically find the directory then save files
+# Part 3
+# Deep Lab
 
-print("MS AttnGAN inference")
+# print("DeepLab V2 segmentation: setup conda environment")
+#
+# bashCommand30 = 'conda env create -f configs/conda_env.yaml'
+#
+# os.system(bashCommand30)
+#
+# bashCommand31 = 'conda activate deeplabv2-pytorch'
+#
+# os.system(bashCommand31)
+#
+# print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
+#
+# bashCommand32 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplabv2/scripts/setup_caffemodels.sh'
+#
+# os.system(bashCommand32)
+#
+# print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
+#
+# bashCommand33 = 'sudo python /home/ubuntu/DeepDeco/src/deeplabv2/convert.py --dataset coco'
+#
+# os.system(bashCommand33)
+#
+# print("DeepLab V2 segmentation: now segmenting image....")
+#
+# bashCommand34 = 'sudo python /home/ubuntu/DeepDeco/src/deeplabv2/demo.py single' \
+#                  ' -c /home/ubuntu/DeepDeco/src/deeplabv2/configs/coco.yaml' \
+#                  ' -m /home/ubuntu/DeepDeco/src/deeplabv2/data/models/coco/deeplabv1_resnet101/caffemodel' \
+#                  '/deeplabv1_resnet101-coco.pth' \
+#                  ' -i /home/ubuntu/DeepDeco/jeans.jpg'
+#
+# os.system(bashCommand34)
+#
+# print("DeepLab V2 segmentation: completed")
 
-bashCommand = 'sudo python /home/ubuntu/DeepDeco/src/attngan/code/main.py --cfg ' \
-              '/home/ubuntu/DeepDeco/src/attngan/code/cfg/eval_coco.yml --gpu 0 '
-print("running bash command")
 
-os.system(bashCommand)
 
-# Part 2-2
-# GauGAN
+# Part 4
+# Fast deep photo style transfer
 
-print("NVIDIA GauGAN inference")
+print("Fast deep photo style transfer inference")
+
+bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
+                "ikea_vimle_series_sketch.jpg " \
+                "--style-path " \
+                "jeans.jpeg --checkpoint-path checkpoints/ --out-path " \
+                "output/output_stylized_image2.jpg --deeplab-path " \
+                "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
+
+os.system(bashCommand40)
 
