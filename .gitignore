@@ -11,3 +11,4 @@ __pycache__/
 vgg19weight/
 *.npy
 *.env
+*.tar.gz
