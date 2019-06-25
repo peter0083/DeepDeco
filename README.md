@@ -30,6 +30,9 @@ To install the packages above, please run:
 pip install -r requirements
 ```
 
+also need to install darknet in addition to opencv
+remember to change GPU and Open CV setting for AWS
+
 ## Build Environment
 
 ## Configs
