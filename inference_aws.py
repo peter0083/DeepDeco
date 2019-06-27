@@ -85,7 +85,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 #
 # print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
 #
-# bashCommand33 = 'sudo python /home/ubuntu/DeepDeco/src/deeplabv2/convert.py --dataset coco'
+# bashCommand33 = 'scd udo python /home/ubuntu/DeepDeco/src/deeplabv2/convert.py --dataset coco'
 #
 # os.system(bashCommand33)
 #
