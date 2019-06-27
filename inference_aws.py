@@ -111,7 +111,7 @@ print("Fast deep photo style transfer inference")
 bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
                 "ikea_vimle_series_sketch.jpg " \
                 "--style-path " \
-                "jeans.jpeg --checkpoint-path checkpoints/ --out-path " \
+                "jeans2.jpg --checkpoint-path checkpoints/ --out-path " \
                 "output/output_stylized_image2.jpg --deeplab-path " \
                 "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
 

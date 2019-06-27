@@ -14,6 +14,11 @@ addict
 opencv
 pydensecrf
 
+# style search
+gensim
+keras
+vse
+
 # docker
 click
 Sphinx
