@@ -1,6 +1,6 @@
 # fast deep style transfer
 tensorflow
-tensorflow-gputen
+tensorflow-gpu
 pillow
 gcc7
 pycuda
