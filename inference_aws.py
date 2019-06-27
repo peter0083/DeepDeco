@@ -109,7 +109,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 print("Fast deep photo style transfer inference")
 
 bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
-                "chair_sketch.jpeg " \
+                "office_chair_sketch.jpeg " \
                 "--style-path " \
                 "Vintage_French_Midcentury_Woven_Rattan_and_Bamboo_Chairs.jpg --checkpoint-path checkpoints/ --out-path " \
                 "output/output_stylized_image2.jpg --deeplab-path " \
