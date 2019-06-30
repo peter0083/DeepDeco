@@ -27,21 +27,21 @@ def build_parser():
     # text description of the furniture
     parser.add_argument('--input-text', type=str,
                         help='Input text description of the furniture',
-                        required=True)
+                        metavar='IN_TEXT', required=True)
 
     # Default output path to same name as input in parent directory
-    parser.add_argument('--out-path', type=str,
-                        dest='out_path', help='Output styled image path',
-                        metavar='OUT_PATH', required=True)
+    # parser.add_argument('--out-path', type=str,
+    #                     dest='out_path', help='Output styled image path',
+    #                     metavar='OUT_PATH', required=True)
 
     # Intermediate file save directories
-    parser.add_argument('--resized-dir', type=str,
-                        dest='resized_dir', help='Resized image directory',
-                        metavar='RESIZED_DIR', default=resized_dir)
+    # parser.add_argument('--resized-dir', type=str,
+    #                     dest='resized_dir', help='Resized image directory',
+    #                     metavar='RESIZED_DIR', default=resized_dir)
 
-    parser.add_argument('--seg-dir', type=str,
-                        dest='seg_dir', help='Segmented image directory',
-                        metavar='SEG_DIR', default=seg_dir)
+    # parser.add_argument('--seg-dir', type=str,
+    #                     dest='seg_dir', help='Segmented image directory',
+    #                     metavar='SEG_DIR', default=seg_dir)
 
     return parser
 
