@@ -10,6 +10,8 @@ numpy==1.16.1
 # numpy=1.16.1 has allow_pickle=True as default
 
 # style search
+theano
+pygpu
 gensim
 keras
 vse
