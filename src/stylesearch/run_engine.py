@@ -17,14 +17,18 @@ import re
 from train import sentence2vec
 
 
-# arguments for this script
-parser = ArgumentParser()
+def build_parser():
+    """Parser function"""
+    parser = ArgumentParser()
+    # arguments for this script
+    parser = ArgumentParser()
 
-# Input
-# text description of the furniture
-parser.add_argument('--input-text', type=str,
-                    help='Input text description of the furniture',
-                    metavar='IN_TEXT', required=True)
+    # Input
+    # text description of the furniture
+    parser.add_argument('--input-text', type=str,
+                        help='Input text description of the furniture',
+                        metavar='IN_TEXT', required=True)
+    return parser
 
 
 input_text = parser.parse_args()
@@ -54,6 +58,7 @@ def find_max_similarity(text):
             max_similarity = cosine_similarity(img2vec_dict[key], input_vec)
             key_for_max_similarity = key
     return max_similarity, key_for_max_similarity
+
 
 # retrieve image
 find_max_similarity(input_text)
