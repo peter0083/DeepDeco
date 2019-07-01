@@ -1,4 +1,4 @@
-# fast deep style transfer
+####### fast deep style transfer
 tensorflow
 tensorflow-gpu
 pillow
@@ -7,16 +7,10 @@ pycuda
 ffmpeg
 moviepy
 numpy==1.16.1
-# numpy=1.16.1 has allow_pickle=True as default
-
-# style search
-theano
-pygpu
-gensim
+####### numpy=1.16.1 has allow_pickle=True as default
+####### style search
 keras
-vse
-
-# docker
+####### docker
 click
 Sphinx
 coverage

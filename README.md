@@ -20,6 +20,7 @@ sudo /bin/sh ./NVIDIA-Linux-x86_64*.run
 
 Download DeepLab V3 weights http://download.tensorflow.org/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz
 Download vgg19 weights cd
+Download glove.6B.50d.txt from S3
 
 ## Dependencies
 
