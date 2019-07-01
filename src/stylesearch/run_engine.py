@@ -25,7 +25,7 @@ def build_parser():
 
     # Input
     # text description of the furniture
-    parser.add_argument('--input-text', type=str,
+    parser.add_argument('--input', type=str,
                         help='Input text description of the furniture',
                         metavar='IN_TEXT', required=True)
     return parser
@@ -61,6 +61,6 @@ def find_max_similarity(text):
 
 
 # retrieve image
-find_max_similarity(input_text)
+find_max_similarity(input_text.input)
 
 print(max_similarity, key_for_max_similarity)
