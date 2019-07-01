@@ -19,7 +19,7 @@ from train import sentence2vec
 
 def build_parser():
     """Parser function"""
-    parser = ArgumentParser()
+
     # arguments for this script
     parser = ArgumentParser()
 
