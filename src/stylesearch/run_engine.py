@@ -17,19 +17,14 @@ import re
 from train import sentence2vec
 
 
-def build_parser():
-    """Parser function"""
+# arguments for this script
+parser = ArgumentParser()
 
-    # arguments for this script
-    parser = ArgumentParser()
-
-    # Input
-    # text description of the furniture
-    parser.add_argument('--input', type=str,
-                        help='Input text description of the furniture',
-                        metavar='IN_TEXT', required=True)
-    return parser
-
+# Input
+# text description of the furniture
+parser.add_argument('--input', type=str,
+                    help='Input text description of the furniture',
+                    metavar='IN_TEXT', required=True)
 
 input_text = parser.parse_args()
 
