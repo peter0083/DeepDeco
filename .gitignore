@@ -12,4 +12,4 @@ vgg19weight/
 *.npy
 *.env
 *.tar.gz
-glove.6B.50d.txt
+glove.6B/

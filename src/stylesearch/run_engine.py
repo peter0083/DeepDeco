@@ -56,3 +56,5 @@ def find_max_similarity(text):
 
 # retrieve image
 find_max_similarity(input_text)
+
+print(max_similarity, key_for_max_similarity)
