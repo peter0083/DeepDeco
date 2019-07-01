@@ -14,7 +14,7 @@ import pickle
 from sklearn.metrics.pairwise import cosine_similarity
 import string
 import re
-from src.stylesearch.train import sentence2vec
+from train import sentence2vec
 
 
 # arguments for this script
