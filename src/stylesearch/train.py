@@ -18,7 +18,7 @@ def vec(w):
     This function transforms a string into a 2D vector
     :param w: string
     :return: vector with shape(1, 300)
-    """"
+    """
     print('converting string {} into 2D vector shape(1, 300)'.format(w))
     flat_vec = words.loc[w].values
     return flat_vec.reshape(1, 300)
