@@ -4,6 +4,7 @@
 ##############################################
 # img_to_text pickle and inspiration were
 # from @IvonaTau
+# adapted code from @IvonaTau
 # https://github.com/IvonaTau/style-search
 #
 # #############################################

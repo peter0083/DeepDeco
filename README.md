@@ -22,6 +22,7 @@ Download DeepLab V3 weights http://download.tensorflow.org/models/deeplabv3_pasc
 Download vgg19 weights cd
 Download glove.6B.50d.txt from S3
 
+
 ## Dependencies
 
 *Packages*

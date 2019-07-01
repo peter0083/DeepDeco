@@ -8,8 +8,6 @@ ffmpeg
 moviepy
 numpy==1.16.1
 ####### numpy=1.16.1 has allow_pickle=True as default
-####### style search
-keras
 ####### docker
 click
 Sphinx
