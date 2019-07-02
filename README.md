@@ -18,6 +18,11 @@ wget http://us.download.nvidia.com/tesla/410.104/NVIDIA-Linux-x86_64-410.104.run
 sudo /bin/sh ./NVIDIA-Linux-x86_64*.run
 ```
 
+Download DeepLab V3 weights http://download.tensorflow.org/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz
+Download vgg19 weights cd
+Download glove.6B.50d.txt from S3
+
+
 ## Dependencies
 
 *Packages*
@@ -29,6 +34,9 @@ To install the packages above, please run:
 ```
 pip install -r requirements
 ```
+
+also need to install darknet in addition to opencv
+remember to change GPU and Open CV setting for AWS
 
 ## Build Environment
 

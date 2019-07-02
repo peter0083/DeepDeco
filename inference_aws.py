@@ -85,7 +85,7 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 #
 # print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
 #
-# bashCommand33 = 'sudo python /home/ubuntu/DeepDeco/src/deeplabv2/convert.py --dataset coco'
+# bashCommand33 = 'scd udo python /home/ubuntu/DeepDeco/src/deeplabv2/convert.py --dataset coco'
 #
 # os.system(bashCommand33)
 #
@@ -109,9 +109,9 @@ download_directory_from_s3('gauganspade', 'datasets_mini')
 print("Fast deep photo style transfer inference")
 
 bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
-                "ikea_vimle_series_sketch.jpg " \
+                "office_chair_sketch.jpeg " \
                 "--style-path " \
-                "jeans.jpeg --checkpoint-path checkpoints/ --out-path " \
+                "ikea_timsfors.jpg --checkpoint-path checkpoints/ --out-path " \
                 "output/output_stylized_image2.jpg --deeplab-path " \
                 "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
 

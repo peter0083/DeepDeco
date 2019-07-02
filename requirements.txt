@@ -1,20 +1,14 @@
-# fast deep style transfer
+####### fast deep style transfer
 tensorflow
-tensorflow-gputen
+tensorflow-gpu
 pillow
 gcc7
 pycuda
 ffmpeg
 moviepy
-numpy=1.16.1
-# numpy=1.16.1 has allow_pickle=True as default
-
-# deeplab
-addict
-opencv
-pydensecrf
-
-# docker
+numpy==1.16.1
+####### numpy=1.16.1 has allow_pickle=True as default
+####### docker
 click
 Sphinx
 coverage
