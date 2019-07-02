@@ -39,9 +39,9 @@ with open('pickles/img2vec_dict.p', 'rb') as handle:
 # load w2vec model
 def find_max_similarity(text):
     regex = " *[%s]+ *" % string.punctuation.replace("\\", "\\\\").replace("]", "\\]")
-    stop_list = set('for a of the and to in view more product infromation \
-                    an w very by has ikea get with as information you it on thats have \
-                    price reflects selected options guarantee  brochure year read about terms'.split())
+    stop_list = set('for a of the and to in view more product information \
+                    an w very by has ikea get with as information you it on that have \
+                    price reflects selected options guarantee brochure year read about terms'.split())
     text = text.lower().split(" ")
     text = [word for word in text if word not in stop_list]
     text = ' '.join(text)
@@ -62,7 +62,8 @@ def find_max_similarity(text):
 print("style description: ", input_text.input)
 max_similarity, key_for_max_similarity = find_max_similarity(input_text.input)
 
-print("cosine similarity score: ", max_similarity, '\n', "style image: ", key_for_max_similarity)
+print("cosine similarity score: ", max_similarity)
+print("style image found: ", key_for_max_similarity)
 end = time.time()
 print("inference time: ", end - start, " seconds")
 
