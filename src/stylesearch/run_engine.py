@@ -15,6 +15,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 import string
 import re
 from train import sentence2vec
+import time
+
+start = time.time()
 
 
 # arguments for this script
@@ -56,6 +59,10 @@ def find_max_similarity(text):
 
 
 # retrieve image
-find_max_similarity(input_text.input)
+print("style description: ", input_text.input)
+max_similarity, key_for_max_similarity = find_max_similarity(input_text.input)
 
-print(max_similarity, key_for_max_similarity)
+print("cosine similarity score: ", max_similarity, '\n', "style image: ", key_for_max_similarity)
+end = time.time()
+print("inference time: ", end - start, " seconds")
+

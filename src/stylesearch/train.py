@@ -89,14 +89,3 @@ def img2vec_mapping(img2text_dict):
         img2vec_dict[img_filename] = sentence_vec
     return img2vec_dict
 
-# create the mapping dictionaries
-text2img_dict = text2img_mapping(img2text_dict)
-
-img2vec_dict = img2vec_mapping(img2text_dict)
-
-# save the dictionaries as pickles
-with open('./pickles/text2img_dict_new.p', 'wb') as fp:
-    pickle.dump(text2img_dict, fp)
-
-with open('./pickles/img2text_dict_new.p', 'wb') as fp:
-    pickle.dump(img2text_dict, fp)
