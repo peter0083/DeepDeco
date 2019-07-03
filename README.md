@@ -11,21 +11,23 @@ git clone https://github.com/peter0083/DeepDeco.git
 cd DeepDeco
 ```
 
-For AWS Ubuntu machines, the Nvidia driver may need to be reinstalled with the following commands:
-
-```bash
-wget http://us.download.nvidia.com/tesla/410.104/NVIDIA-Linux-x86_64-410.104.run
-sudo /bin/sh ./NVIDIA-Linux-x86_64*.run
-```
-
-Download DeepLab V3 weights http://download.tensorflow.org/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz
-Download vgg19 weights cd
 Download glove.6B.50d.txt from S3
 
 
 ## Dependencies
 
-*Packages*
+*Deep Photo Style Transfer*
+
+* [Tensorflow](https://www.tensorflow.org/)
+* [Numpy](www.numpy.org/)
+* [Pillow](https://pypi.python.org/pypi/Pillow/)
+* [Scipy](https://www.scipy.org/)
+* [PyCUDA](https://pypi.python.org/pypi/pycuda)
+
+*Style Search Engine*
+
+* [Sklearn](https://scikit-learn.org/stable/)
+* [Pandas](https://pandas.pydata.org/)
 
 *Installation*
 
@@ -35,14 +37,24 @@ To install the packages above, please run:
 pip install -r requirements
 ```
 
-also need to install darknet in addition to opencv
-remember to change GPU and Open CV setting for AWS
+### Download the VGG-19 model weights
+The VGG-19 model of tensorflow is adopted from [VGG Tensorflow](https://github.com/machrisaa/tensorflow-vgg) with few 
+modifications on the class interface. The VGG-19 model weights is stored as .npy file 
+and could be download from [Google Drive](https://drive.google.com/file/d/0BxvKyd83BJjYY01PYi1XQjB5R0E/view?usp=sharing) or [BaiduYun Pan](https://pan.baidu.com/s/1o9weflK). 
+After downloading, copy the weight file to the **./project/vgg19** directory
+
+### Download the Deep Lab V3 weights
+Download DeepLab V3 weights from [DeepLabV3 Tensorflow](http://download.tensorflow.org/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz).
+After downloading the file, copy the weight file to **src/ftdeepphoto/deeplab/models/** directory
+
+### Download the GloVe 6B 300d weights
+Download GloVe 6B 300d weights from [Stanford NLP group](http://nlp.stanford.edu/data/glove.6B.zip). 
+Unzip the zip file and move `glove.6B.300d.txt` to the **src/stylesearch/pickles/glove.6B/** directory.
 
 ## Build Environment
 
 ## Configs
 
-## Test
 
 ## Train
 
