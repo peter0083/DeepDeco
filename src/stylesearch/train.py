@@ -9,8 +9,20 @@ import numpy as np
 import csv
 
 
+# arguments for this script
+parser = ArgumentParser()
+
+# Input
+# text description of the furniture
+parser.add_argument('--weight_path', type=str,
+                    help='path to the pre-trained Word2Vec weight file',
+                    metavar='IN_TEXT', required=False)
+
+words = parser.parse_args()
+
 # load pre-trained glove
-words = pd.read_csv('./pickles/glove.6B/glove.6B.300d.txt', sep=" ", index_col=0, header=None, quoting=csv.QUOTE_NONE)
+if words is None:
+    words = pd.read_csv('./pickles/glove.6B/glove.6B.300d.txt', sep=" ", index_col=0, header=None, quoting=csv.QUOTE_NONE)
 
 # Vectorizer function
 def vec(w):
