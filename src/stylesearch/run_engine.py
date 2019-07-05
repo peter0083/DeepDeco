@@ -35,6 +35,8 @@ parser.add_argument('--weight_path', type=str,
 
 input_text = parser.parse_args()
 
+print("this is the text input that run_engine.py parser received: ", input_text)
+
 # load dict
 with open('pickles/img2vec_dict.p', 'rb') as handle:
     img2vec_dict = pickle.load(handle)
