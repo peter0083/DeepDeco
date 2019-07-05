@@ -34,7 +34,7 @@ input_text = parser.parse_args()
 print("this is the text input that run_engine.py parser received: ", input_text.input)
 
 # load dict
-with open('pickles/img2vec_dict.p', 'rb') as handle:
+with open('src/stylesearch/pickles/img2vec_dict.p', 'rb') as handle:
     img2vec_dict = pickle.load(handle)
 
 
