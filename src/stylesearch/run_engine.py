@@ -29,9 +29,9 @@ parser.add_argument('--input', type=str,
                     help='Input text description of the furniture',
                     metavar='IN_TEXT', required=True)
 
-input_text = parser.parse_args(['--input'])
+input_text = parser.parse_args()
 
-print("this is the text input that run_engine.py parser received: ", input_text)
+print("this is the text input that run_engine.py parser received: ", input_text.input)
 
 # load dict
 with open('pickles/img2vec_dict.p', 'rb') as handle:
