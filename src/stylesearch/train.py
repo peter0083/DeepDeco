@@ -101,7 +101,7 @@ class Vectorizer:
 
 
 # load img2text dictionary
-img_to_text_pickle = open('./pickles/img_to_text.p', 'rb')
+img_to_text_pickle = open('src/stylesearch/pickles/img_to_text.p', 'rb')
 img2text_dict = pickle.load(img_to_text_pickle)
 img_to_text_pickle.close()
 
