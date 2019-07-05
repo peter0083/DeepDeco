@@ -35,6 +35,8 @@ if words is None:
 
 class Vectorizer:
 
+    def __init__(self):
+
     # Vectorizer function
     def vec(self, word_string):
         """
