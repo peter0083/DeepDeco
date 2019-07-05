@@ -14,7 +14,7 @@ import pickle
 from sklearn.metrics.pairwise import cosine_similarity
 import string
 import re
-from train.Vectorizer import sentence2vec
+from train import Vectorizer
 import time
 import boto3
 import os
@@ -77,7 +77,7 @@ class StyleSearch:
         text = [word for word in text if word not in stop_list]
         text = ' '.join(text)
         text = re.sub(regex, " ", text)
-        input_vec = sentence2vec(text.split(" "))
+        input_vec = Vectorizer.sentence2vec(text.split(" "))
         max_similarity = 0
         key_for_max_similarity = None
         for key, value in img2vec_dict.items():

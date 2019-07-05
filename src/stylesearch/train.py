@@ -56,7 +56,7 @@ class Vectorizer:
         running_sum = np.zeros((1, 300))
         for word in words_array:
             try:
-                running_sum += vec(word)
+                running_sum += self.vec(word)
             except Exception as e:
                 print("This word does not exist in Glove.6B.300:{}.".format(word))
                 continue
@@ -75,7 +75,7 @@ class Vectorizer:
             words_array = desc_string.split(" ")
             print(words_array)
             print("current image file being processed", img_filename)
-            sentence_vec = sentence2vec(words_array)
+            sentence_vec = self.sentence2vec(words_array)
             text2img_dict[str(sentence_vec)] = img_filename
         return text2img_dict
 
@@ -92,7 +92,7 @@ class Vectorizer:
             words_array = desc_string.split(" ")
             print(words_array)
             print("current image file being processed", img_filename)
-            sentence_vec = sentence2vec(words_array)
+            sentence_vec = self.sentence2vec(words_array)
             img2vec_dict[img_filename] = sentence_vec
         return img2vec_dict
 
