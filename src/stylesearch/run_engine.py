@@ -47,7 +47,8 @@ class StyleSearch:
     def download_directory_from_s3(self, bucket_name,
                                    remote_directory_name):
         """
-        AWS CLI credential required.
+        To download sample data from S3 bucket,
+        AWS CLI credential is required.
 
         :param bucket_name: string
         :param remote_directory_name: string
@@ -66,7 +67,14 @@ class StyleSearch:
         local_path = os.path.dirname(key.key)
         return local_path
 
+    # core function
     def find_max_similarity(self, text):
+        """
+        This function returns the style image that best matches the text input.
+        :param text: string, description of desired style/texture
+        :return: max_similarity [float], cosine similarity score of the closest style image
+                 key_for_max_similarity [string], file path and file name of the closest style image
+        """
         start = time.time()
 
         regex = " *[%s]+ *" % string.punctuation.replace("\\", "\\\\").replace("]", "\\]")
@@ -98,5 +106,5 @@ class StyleSearch:
         return max_similarity, key_for_max_similarity
 
 
-StyleSearch.find_max_similarity(input_text)
+StyleSearch.find_max_similarity(text=input_text)
 
