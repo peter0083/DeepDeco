@@ -32,6 +32,7 @@ if words is None:
                         header=None,
                         quoting=csv.QUOTE_NONE)
 
+print("check what is in words @ train.py: ", words)
 
 class Vectorizer:
 
