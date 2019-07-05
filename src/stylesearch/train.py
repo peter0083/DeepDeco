@@ -10,15 +10,15 @@ import csv
 from argparse import ArgumentParser
 
 # arguments for this script
-parser = ArgumentParser()
+parser_train = ArgumentParser()
 
 # Input
 # text description of the furniture
-parser.add_argument('--weight_path', type=str,
+parser_train.add_argument('--weight_path', type=str,
                     help='path to the pre-trained Word2Vec weight file',
                     metavar='IN_TEXT', required=False)
 
-words = parser.parse_args()
+words = parser_train.parse_args()
 
 # load pre-trained glove
 if words is None:
