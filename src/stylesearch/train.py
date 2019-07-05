@@ -22,22 +22,22 @@ parser.add_argument('--input', type=str,
                     help='Input text description of the furniture',
                     metavar='IN_TEXT', required=False)
 
-words = parser.parse_args()
+words_weight = parser.parse_args()
 
-# load pre-trained glove
-if words.weight_path is None:
-    words = pd.read_csv('./pickles/glove.6B/glove.6B.300d.txt',
+# load pre-trained glove to words variable
+if words_weight.weight_path is None:
+    words_weight = pd.read_csv('./pickles/glove.6B/glove.6B.300d.txt',
                         sep=" ",
                         index_col=0,
                         header=None,
                         quoting=csv.QUOTE_NONE)
 
-    print("Pre-trained GloVe.6B.300d loaded: ", words)
+    print("Pre-trained GloVe.6B.300d loaded: ", words_weight)
 
 class Vectorizer:
 
     def __init__(self):
-        print(self)
+        print("Vectorizer loaded", self)
 
     # Vectorizer function
     def vec(self, word_string):
@@ -47,7 +47,7 @@ class Vectorizer:
         :return: vector with shape(1, 300)
         """
         print('converting string {} into 2D vector shape(1, 300)'.format(word_string))
-        flat_vec = words.loc[word_string].values
+        flat_vec = words_weight.loc[word_string].values
         return flat_vec.reshape(1, 300)
 
     # sentence-to-vector conversion
@@ -64,7 +64,7 @@ class Vectorizer:
             except Exception as e:
                 print("This word does not exist in Glove.6B.300:{}.".format(word))
                 continue
-        return running_sum/len(words_array)
+        return running_sum/len(words_weight)
 
     def text2img_mapping(self, img2text_dict):
         """
