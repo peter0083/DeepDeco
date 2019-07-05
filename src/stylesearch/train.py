@@ -26,7 +26,7 @@ words_weight = parser.parse_args()
 
 # load pre-trained glove to words variable
 if words_weight.weight_path is None:
-    words_weight = pd.read_csv('./pickles/glove.6B/glove.6B.300d.txt',
+    words_weight = pd.read_csv('src/stylesearch/pickles/glove.6B/glove.6B.300d.txt',
                         sep=" ",
                         index_col=0,
                         header=None,
