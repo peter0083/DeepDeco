@@ -12,6 +12,7 @@
 import time
 from argparse import ArgumentParser
 from src.stylesearch.run_engine import StyleSearch
+import pickle
 
 
 start = time.time()
