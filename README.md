@@ -105,10 +105,6 @@ python src/ftdeepphoto/run_fpst.py --in-path \
 
 ## Reference
 
-## hardcoded filepath that needs to fix
-
-- deeplab convert.py file path
-- deeplab setup_caffemodels.sh file path
 
 ### Project Structure
 The directory structure of your new project looks like this: 
