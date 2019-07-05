@@ -63,7 +63,7 @@ class Vectorizer:
             except Exception as e:
                 print("This word does not exist in Glove.6B.300:{}.".format(word))
                 continue
-        return running_sum/len(words)
+        return running_sum/len(words_array)
 
     def text2img_mapping(self, img2text_dict):
         """
