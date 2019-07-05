@@ -29,7 +29,7 @@ parser.add_argument('--input', type=str,
                     help='Input text description of the furniture',
                     metavar='IN_TEXT', required=True)
 
-input_text = parser.parse_args()
+input_text = parser.parse_args('--input')
 
 print("this is the text input that run_engine.py parser received: ", input_text)
 
