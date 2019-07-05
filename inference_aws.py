@@ -6,40 +6,37 @@
 # 2. a string describing the desired text
 # #############################################
 
-import os
-import boto3
+
+import time
+from src.stylesearch.run_engine import StyleSearch
 
 
-# Part 1
-# download data from S3
+start = time.time()
 
 
-# code adapted from https://stackoverflow.com/questions/49772151/boto3-download-folder-from-s3
-# and https://www.mydatahack.com/comprehensive-guide-to-download-files-from-s3-with-python/
+# arguments for this script
+parser = ArgumentParser()
+
+# Input
+# text description of the furniture
+parser.add_argument('--input_style_text', type=str,
+                    help='Input text description of the furniture',
+                    metavar='IN_TEXT', required=True)
 
 
-def download_directory_from_s3(bucket_name,
-                               remote_directory_name):
-    """
-    :param bucket_name: string
-    :param remote_directory_name: string
-    :return: local_path
-    """
-
-    s3 = boto3.resource('s3')
-    bucket = s3.Bucket(bucket_name)
-    for key in bucket.objects.filter(Prefix=remote_directory_name):
-        if not os.path.exists(os.path.dirname(key.key)):
-            os.makedirs(os.path.dirname(key.key))
-        bucket.download_file(key.key, key.key)
-        print('Downloaded file with boto3 resource')
-    local_path = os.path.dirname(key.key)
-    return local_path
-
-
+input_text = parser.parse_args()
 
 
 # Part 2
+# Style Search Engine
+
+# load dict
+with open('src/stylesearch/pickles/img2vec_dict.p', 'rb') as handle:
+    img2vec_dict = pickle.load(handle)
+
+max_similarity, key_for_max_similarity = StyleSearch.find_max_similarity(input_text)
+
+# Part 3
 # Fast deep photo style transfer
 
 print("Fast deep photo style transfer inference")
@@ -51,5 +48,5 @@ bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
                 "output/output_stylized_image2.jpg --deeplab-path " \
                 "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
 
-os.system(bashCommand40)
+# os.system(bashCommand40)
 
