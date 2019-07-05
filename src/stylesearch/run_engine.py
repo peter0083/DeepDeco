@@ -105,6 +105,6 @@ class StyleSearch:
 
         return max_similarity, key_for_max_similarity
 
-
-StyleSearch.find_max_similarity(text=input_text)
+ss = StyleSearch()
+ss.find_max_similarity(text=input_text)
 
