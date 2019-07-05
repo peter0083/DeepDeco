@@ -1,10 +1,10 @@
-##############################################
+"""
 # this script runs inference
 # to generate an image based on
 # the following inputs:
 # 1. an image of a piece of furniture (sketch)
 # 2. a string describing the desired text
-# #############################################
+"""
 
 
 import time
@@ -35,7 +35,7 @@ input_text = parser.parse_args()
 with open('src/stylesearch/pickles/img2vec_dict.p', 'rb') as handle:
     img2vec_dict = pickle.load(handle)
 
-max_similarity, key_for_max_similarity = StyleSearch.find_max_similarity(input_text)
+max_similarity, key_for_max_similarity = StyleSearch.find_max_similarity(input_text.input_style_text)
 
 # Part 3
 # Fast deep photo style transfer
@@ -45,9 +45,9 @@ print("Fast deep photo style transfer inference")
 bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
                 "office_chair_sketch.jpeg " \
                 "--style-path " \
-                "ikea_timsfors.jpg --checkpoint-path checkpoints/ --out-path " \
+                "data/"+ key_for_max_similarity + " --checkpoint-path checkpoints/ --out-path " \
                 "output/output_stylized_image2.jpg --deeplab-path " \
                 "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
-
+print(bashCommand40)
 # os.system(bashCommand40)
 
