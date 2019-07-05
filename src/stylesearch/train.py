@@ -107,11 +107,8 @@ img_to_text_pickle.close()
 
 # create a dictionary that has text vectors from image captions as keys and the corresponding image filename as values
 
-text2img_dict = dict()
-
 # create a dictionary that has the furniture image file names as keys and
 # the corresponding text vectors as values
 
-img2vec_dict = dict()
 
 
