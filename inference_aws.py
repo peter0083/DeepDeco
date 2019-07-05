@@ -12,6 +12,7 @@
 import time
 from argparse import ArgumentParser
 from src.stylesearch.run_engine import StyleSearch
+from src.stylesearch.train import Vectorizer
 
 
 start = time.time()
@@ -37,7 +38,8 @@ input_text = parser.parse_args()
 with open('src/stylesearch/pickles/img2vec_dict.p', 'rb') as handle:
     img2vec_dict = pickle.load(handle)
 
-max_similarity, key_for_max_similarity = StyleSearch.find_max_similarity(input_text.input_style_text)
+ss = StyleSearch()
+max_similarity, key_for_max_similarity = ss.find_max_similarity(input_text.input_style_text)
 
 # Part 3
 # Fast deep photo style transfer
