@@ -25,14 +25,14 @@ parser.add_argument('--input', type=str,
 words = parser.parse_args()
 
 # load pre-trained glove
-if words is None:
+if words.weight_path is None:
     words = pd.read_csv('./pickles/glove.6B/glove.6B.300d.txt',
                         sep=" ",
                         index_col=0,
                         header=None,
                         quoting=csv.QUOTE_NONE)
 
-print("check what is in words @ train.py: ", words)
+    print("Pre-trained GloVe.6B.300d loaded: ", words)
 
 class Vectorizer:
 
