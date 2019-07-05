@@ -84,7 +84,8 @@ class StyleSearch:
         text = [word for word in text if word not in stop_list]
         text = ' '.join(text)
         text = re.sub(regex, " ", text)
-        input_vec = Vectorizer.sentence2vec(words_array=text.split(" "))
+        Vec = Vectorizer()
+        input_vec = Vec.sentence2vec(words_array=text.split(" "))
         max_similarity = 0
         key_for_max_similarity = None
         for key, value in img2vec_dict.items():
