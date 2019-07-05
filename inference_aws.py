@@ -12,7 +12,6 @@
 import time
 from argparse import ArgumentParser
 from src.stylesearch.run_engine import StyleSearch
-from src.stylesearch.train import Vectorizer
 
 
 start = time.time()

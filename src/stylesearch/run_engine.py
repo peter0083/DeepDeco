@@ -14,7 +14,7 @@ import pickle
 from sklearn.metrics.pairwise import cosine_similarity
 import string
 import re
-from train import Vectorizer
+from src.stylesearch.train import Vectorizer
 import time
 import boto3
 import os
