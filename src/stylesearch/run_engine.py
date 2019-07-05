@@ -75,6 +75,7 @@ class StyleSearch:
         :return: max_similarity [float], cosine similarity score of the closest style image
                  key_for_max_similarity [string], file path and file name of the closest style image
         """
+        print("this is the text input that find_max_similarity function received: ", text)
         start = time.time()
 
         regex = " *[%s]+ *" % string.punctuation.replace("\\", "\\\\").replace("]", "\\]")
