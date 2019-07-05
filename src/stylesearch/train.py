@@ -32,7 +32,6 @@ if words_weight.weight_path is None:
                         header=None,
                         quoting=csv.QUOTE_NONE)
 
-    print("Pre-trained GloVe.6B.300d loaded: ", words_weight)
 
 class Vectorizer:
 
