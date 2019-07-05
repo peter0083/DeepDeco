@@ -29,10 +29,6 @@ parser.add_argument('--input', type=str,
                     help='Input text description of the furniture',
                     metavar='IN_TEXT', required=True)
 
-parser.add_argument('--weight_path', type=str,
-                    help='path to the pre-trained Word2Vec weight file',
-                    metavar='IN_TEXT', required=False)
-
 input_text = parser.parse_args()
 
 print("this is the text input that run_engine.py parser received: ", input_text)
