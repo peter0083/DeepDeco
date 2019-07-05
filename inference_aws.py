@@ -22,7 +22,7 @@ parser = ArgumentParser()
 
 # Input
 # text description of the furniture
-parser.add_argument('--input_style_text', type=str,
+parser.add_argument('--input', type=str,
                     help='Input text description of the furniture',
                     metavar='IN_TEXT', required=True)
 
@@ -38,7 +38,7 @@ with open('src/stylesearch/pickles/img2vec_dict.p', 'rb') as handle:
     img2vec_dict = pickle.load(handle)
 
 ss = StyleSearch()
-max_similarity, key_for_max_similarity = ss.find_max_similarity(input_text.input_style_text)
+max_similarity, key_for_max_similarity = ss.find_max_similarity(input_text.input)
 
 # Part 3
 # Fast deep photo style transfer
