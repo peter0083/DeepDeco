@@ -34,7 +34,6 @@ parser.add_argument('--content', type=str,
 
 input_text = parser.parse_args()
 
-input_text.content = "office_chair_sketch.jpeg"
 
 # Part 2
 # Style Search Engine
