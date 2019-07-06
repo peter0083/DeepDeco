@@ -13,6 +13,7 @@ import time
 from argparse import ArgumentParser
 from src.stylesearch.run_engine import StyleSearch
 import pickle
+import datetime
 
 
 start = time.time()
@@ -27,6 +28,9 @@ parser.add_argument('--input', type=str,
                     help='Input text description of the furniture',
                     metavar='IN_TEXT', required=True)
 
+parser.add_argument('--content', type=str,
+                    help='Input sketch image file including its file path',
+                    metavar='IN_TEXT', required=True)
 
 input_text = parser.parse_args()
 
@@ -46,12 +50,20 @@ max_similarity, key_for_max_similarity = ss.find_max_similarity(input_text.input
 
 print("Fast deep photo style transfer inference")
 
+currentDT = datetime.datetime.now()
+
 bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
-                "office_chair_sketch.jpeg " \
+                + input_text.content + " " \
                 "--style-path " \
                 "data/"+ key_for_max_similarity + " --checkpoint-path checkpoints/ --out-path " \
-                "output/output_stylized_image2.jpg --deeplab-path " \
+                "output/output_stylized_image"+ str(currentDT) +".jpg --deeplab-path " \
                 "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
 print(bashCommand40)
+
+start = time.time()
+PERIOD_OF_TIME = 300 # 5min. stop style transfer after 5min.
 # os.system(bashCommand40)
+if time.time() > start + PERIOD_OF_TIME : break
+end = time.time()
+print("style transfer time: ", end - start, " seconds")
 
