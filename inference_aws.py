@@ -51,7 +51,7 @@ max_similarity, key_for_max_similarity = ss.find_max_similarity(input_text.input
 
 print("Fast deep photo style transfer inference")
 
-currentDT = datetime.time.now()
+currentDT = datetime.time.fromisoformat()
 
 bashCommand40 = "timeout 500 "\
                 "python src/ftdeepphoto/run_fpst.py --in-path " \
