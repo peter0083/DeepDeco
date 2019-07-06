@@ -22,6 +22,10 @@ parser.add_argument('--input', type=str,
                     help='Input text description of the furniture',
                     metavar='IN_TEXT', required=False)
 
+parser.add_argument('--content', type=str,
+                    help='Input sketch image file including its file path',
+                    metavar='IN_TEXT', required=False)
+
 words_weight = parser.parse_args()
 
 # load pre-trained glove to words variable
