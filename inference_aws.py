@@ -52,7 +52,8 @@ print("Fast deep photo style transfer inference")
 
 currentDT = datetime.datetime.now()
 
-bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
+bashCommand40 = "timeout 500 "\
+                "python src/ftdeepphoto/run_fpst.py --in-path " \
                 + input_text.content + " " \
                 "--style-path " \
                 "data/"+ key_for_max_similarity + " --checkpoint-path checkpoints/ --out-path " \
@@ -61,11 +62,7 @@ bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
 print(bashCommand40)
 
 start = time.time()
-PERIOD_OF_TIME = 300 # 5min. stop style transfer after 5min.
-# os.system(bashCommand40)
-if time.time() > start + PERIOD_OF_TIME :
-    end = time.time()
-else:
-    end = time.time()
+os.system(bashCommand40)
+end = time.time()
 print("style transfer time: ", end - start, " seconds")
 
