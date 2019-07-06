@@ -16,7 +16,7 @@ parser = ArgumentParser()
 # text description of the furniture
 parser.add_argument('--weight_path', type=str,
                     help='path to the pre-trained Word2Vec weight file',
-                    metavar='IN_TEXT', required=False)
+                    metavar='IN_WT', required=False)
 
 parser.add_argument('--input', type=str,
                     help='Input text description of the furniture',
@@ -24,7 +24,7 @@ parser.add_argument('--input', type=str,
 
 parser.add_argument('--content', type=str,
                     help='Input sketch image file including its file path',
-                    metavar='IN_TEXT', required=False)
+                    metavar='IN_CONTENT', required=False)
 
 words_weight = parser.parse_args()
 

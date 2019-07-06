@@ -30,7 +30,7 @@ parser.add_argument('--input', type=str,
 
 parser.add_argument('--content', type=str,
                     help='Input sketch image file including its file path',
-                    metavar='IN_TEXT', required=True)
+                    metavar='IN_CONTENT', required=True)
 
 input_text = parser.parse_args()
 
