@@ -58,7 +58,7 @@ bashCommand40 = "timeout 500 "\
                 + input_text.content + " " \
                 "--style-path " \
                 "data/"+ key_for_max_similarity + " --checkpoint-path checkpoints/ --out-path " \
-                "output/output_stylized_image"+ str(currentDT).strip() +".jpg --deeplab-path " \
+                "output/output_stylized_image"+ (str(currentDT)).strip() +".jpg --deeplab-path " \
                 "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
 print(bashCommand40)
 
