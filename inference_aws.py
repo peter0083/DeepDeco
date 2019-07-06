@@ -63,7 +63,9 @@ print(bashCommand40)
 start = time.time()
 PERIOD_OF_TIME = 300 # 5min. stop style transfer after 5min.
 # os.system(bashCommand40)
-if time.time() > start + PERIOD_OF_TIME : break
-end = time.time()
+if time.time() > start + PERIOD_OF_TIME :
+    end = time.time()
+else:
+    end = time.time()
 print("style transfer time: ", end - start, " seconds")
 
