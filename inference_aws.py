@@ -89,3 +89,5 @@ for file in os.listdir("."):
         images.append(imageio.imread(file))
 imageio.mimsave("output/output_stylized_image" + currentDT.strftime('%Y_%m_%d_%H_%M_%S') + ".gif", images)
 
+print("gif saved in output/output_stylized_image" + currentDT.strftime('%Y_%m_%d_%H_%M_%S') + ".gif")
+
