@@ -58,10 +58,10 @@ print("Fast deep photo style transfer inference")
 currentDT = datetime.now(timezone.utc)
 
 if input_text.speed == 'slow':
-    timer = '3600' # 60 sec/min * 60 min = 3600 sec
+    timer = '3600'  # 60 sec/min * 60 min = 3600 sec
 
 elif input_text.speed == 'medium':
-    timer = '900' # 60 sec/min * 15 min = 900 sec
+    timer = '900'  # 60 sec/min * 15 min = 900 sec
 
 else:
     timer = '300'
