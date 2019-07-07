@@ -15,6 +15,7 @@ from src.stylesearch.run_engine import StyleSearch
 import pickle
 from _datetime import datetime, timezone
 import os
+import imageio
 
 
 start = time.time()
@@ -80,7 +81,11 @@ os.system(bashCommand40)
 end = time.time()
 print("style transfer time: ", end - start, " seconds")
 
+# make a gif
+images = []
+
 for file in os.listdir("."):
     if file.endswith(".png"):
-        print(file)
+        images.append(imageio.imread(file))
+imageio.mimsave("output/output_stylized_image" + currentDT.strftime('%Y_%m_%d_%H_%M_%S') + ".gif", images)
 
