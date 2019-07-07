@@ -35,7 +35,7 @@ parser.add_argument('--content', type=str,
                     metavar='IN_CONTENT', required=True)
 
 parser.add_argument('--speed', type=str,
-                    help='Input style transfer speed. slow: 1 hour (best quality). medium: 15 min. fast: 5 min',
+                    help='Input style transfer speed. slow: 1 hour (best quality). medium: 20 min. fast: 7 min',
                     metavar='IN_SPEED', required=False)
 
 input_text = parser.parse_args()
@@ -62,10 +62,10 @@ if input_text.speed == 'slow':
     timer = '3600'  # 60 sec/min * 60 min = 3600 sec
 
 elif input_text.speed == 'medium':
-    timer = '900'  # 60 sec/min * 15 min = 900 sec
+    timer = '1200'  # 60 sec/min * 20 min = 1200 sec
 
 else:
-    timer = '300'
+    timer = '420'
 
 bashCommand40 = "timeout " + timer + " " \
                 "python src/ftdeepphoto/run_fpst.py --in-path " \
