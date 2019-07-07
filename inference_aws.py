@@ -13,7 +13,7 @@ import time
 from argparse import ArgumentParser
 from src.stylesearch.run_engine import StyleSearch
 import pickle
-import datetime
+from _datetime import datetime
 import os
 
 
