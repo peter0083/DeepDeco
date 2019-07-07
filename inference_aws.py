@@ -33,6 +33,10 @@ parser.add_argument('--content', type=str,
                     help='Input sketch image file including its file path',
                     metavar='IN_CONTENT', required=True)
 
+parser.add_argument('--speed', type=str,
+                    help='Input style transfer speed. slow: 1 hour (best quality). medium: 15 min. fast: 5 min',
+                    metavar='IN_SPEED', required=False)
+
 input_text = parser.parse_args()
 
 
@@ -53,7 +57,16 @@ print("Fast deep photo style transfer inference")
 
 currentDT = datetime.datetime.today().sftrftime('%Y_%m_%d_%H_%M_%S')
 
-bashCommand40 = "timeout 1000 "\
+if input_text.speed == 'slow':
+    timer = 3600 # 60 sec/min * 60 min = 3600 sec
+
+elif input_text.speed == 'medium':
+    timer = 900 # 60 sec/min * 15 min = 900 sec
+
+else:
+    timer = 300
+
+bashCommand40 = "timeout " + timer + \
                 "python src/ftdeepphoto/run_fpst.py --in-path " \
                 + input_text.content + " " \
                 "--style-path " \
@@ -66,4 +79,8 @@ start = time.time()
 os.system(bashCommand40)
 end = time.time()
 print("style transfer time: ", end - start, " seconds")
+
+for file in os.listdir("."):
+    if file.endswith(".png"):
+        print(file)
 
