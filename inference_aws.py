@@ -56,6 +56,7 @@ max_similarity, key_for_max_similarity = ss.find_max_similarity(input_text.input
 print("Fast deep photo style transfer inference")
 
 currentDT = datetime.now()
+print("current datetime: ", currentDT.sftrftime('%Y_%m_%d_%H_%M_%S'))
 
 if input_text.speed == 'slow':
     timer = 3600 # 60 sec/min * 60 min = 3600 sec
@@ -70,7 +71,7 @@ bashCommand40 = "timeout " + timer + \
                 "python src/ftdeepphoto/run_fpst.py --in-path " \
                 + input_text.content + " " \
                 "--style-path " \
-                "data/"+ key_for_max_similarity + " --checkpoint-path checkpoints/ --out-path " \
+                "data/" + key_for_max_similarity + " --checkpoint-path checkpoints/ --out-path " \
                 "output/output_stylized_image" + str(currentDT.sftrftime('%Y_%m_%d_%H_%M_%S')) + ".jpg --deeplab-path " \
                 "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
 print(bashCommand40)
