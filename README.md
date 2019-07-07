@@ -81,15 +81,14 @@ python src/ftdeepphoto/style_fpst.py \
 
 ## Run Inference
 
-1. in `ftdeepphoto/resizedPhotos`, put the content image 
-2. setup your `awscli` credentials (required to download the dataset)
-3. run the following python script for style search
+1. setup your `awscli` credentials (required to download the dataset)
+2. run the following python script for style search
 
 ```bash
 python src/stylesearch/run_engine.py --input "text description of the style you want"
 ```
 
-4. Once the style image is generated, you can apply style transfer onto the sketch using the following script:
+3. Once the style image is generated, you can apply style transfer onto the sketch using the following script:
 
 ```bash
 python src/ftdeepphoto/run_fpst.py --in-path \
