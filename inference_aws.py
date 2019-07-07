@@ -66,7 +66,7 @@ elif input_text.speed == 'medium':
 else:
     timer = '300'
 
-bashCommand40 = "timeout " + timer + \
+bashCommand40 = "timeout " + timer + " " \
                 "python src/ftdeepphoto/run_fpst.py --in-path " \
                 + input_text.content + " " \
                 "--style-path " \
