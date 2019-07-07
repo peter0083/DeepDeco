@@ -55,7 +55,7 @@ max_similarity, key_for_max_similarity = ss.find_max_similarity(input_text.input
 
 print("Fast deep photo style transfer inference")
 
-currentDT = datetime.now(datetime.timezone.utc)
+currentDT = datetime.now(timezone.utc)
 
 if input_text.speed == 'slow':
     timer = '3600' # 60 sec/min * 60 min = 3600 sec
