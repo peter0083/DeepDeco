@@ -22,7 +22,7 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-@app.route()
+@app.route('/')
 def instruction():
     return "Please visit https://github.com/peter0083/DeepDeco for API instruction"
 
