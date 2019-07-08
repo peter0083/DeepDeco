@@ -1,119 +1,93 @@
-##############################################
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
 # this script runs inference
 # to generate an image based on
-# the following inputs
-# 1. a text description of the object (MS AttnGAN)
-# 2. a outline image of an object (Nvidia GauGAN)
+# the following inputs:
+# 1. an image of a piece of furniture (sketch)
+# 2. a string describing the desired text
+"""
 
-# to run this script on AWS Linux Set up the data folder to contain four things:
-#
-# 'train' folder. This contains 'filenames.pickle' for the training files 'test' folder. This should contain
-#  'filenames.pickle' for the test files
-#
-# 'coco' folder. This should contain all the images from the coco dataset. (train, val and test)
-#
-# 'captions.pickle' (if you plan to use pre-trained models)
-#  Update your configuration files in 'code/cfg/' to point to the parent
-#
-# directory of the 'coco' folder. E.g: if 'coco' folder is in 'data/coco/coco' path, put the 'data' path in your
-# config files as 'data/coco'
-#
-# ensure that `sudo python -V` gives your python 3.6
-#
-# ensure that `sudo conda install --file requirements.txt` is successful then execute "sudo python inference_aws.py"
-# #############################################
 
+import time
+from argparse import ArgumentParser
+from src.stylesearch.run_engine import StyleSearch
+import pickle
+from datetime import datetime, timezone
 import os
-import boto3
+import imageio
 
 
-# Part 1
-# download data from S3
+start = time.time()
 
 
-# code adapted from https://stackoverflow.com/questions/49772151/boto3-download-folder-from-s3
-# and https://www.mydatahack.com/comprehensive-guide-to-download-files-from-s3-with-python/
+# arguments for this script
+parser = ArgumentParser()
 
+# Input
+# text description of the furniture
+parser.add_argument('--input', type=str,
+                    help='Input text description of the furniture',
+                    metavar='IN_TEXT', required=True)
 
-def download_directory_from_s3(bucket_name,
-                               remote_directory_name):
-    """
-    :param bucket_name: string
-    :param remote_directory_name: string
-    :return: local_path
-    """
+parser.add_argument('--content', type=str,
+                    help='Input sketch image file including its file path',
+                    metavar='IN_CONTENT', required=True)
 
-    s3 = boto3.resource('s3')
-    bucket = s3.Bucket(bucket_name)
-    for key in bucket.objects.filter(Prefix=remote_directory_name):
-        if not os.path.exists(os.path.dirname(key.key)):
-            os.makedirs(os.path.dirname(key.key))
-        bucket.download_file(key.key, key.key)
-        print('Downloaded file with boto3 resource')
-    local_path = os.path.dirname(key.key)
-    return local_path
+parser.add_argument('--speed', type=str,
+                    help='Input style transfer speed. slow: 1 hour (best quality). medium: 20 min. fast: 10 min',
+                    metavar='IN_SPEED', required=False)
 
+input_text = parser.parse_args()
 
-download_directory_from_s3('gauganspade', 'datasets_mini')
-
-# need a separate command to download vgg19 weight from S3
-
-
-# add download for attnGAN in WK3
 
 # Part 2
-# image similarity search
+# Style Search Engine
+
+# load dict
+with open('src/stylesearch/pickles/img2vec_dict.p', 'rb') as handle:
+    img2vec_dict = pickle.load(handle)
+
+ss = StyleSearch()
+max_similarity, key_for_max_similarity = ss.find_max_similarity(input_text.input)
 
 # Part 3
-# Deep Lab
-
-# print("DeepLab V2 segmentation: setup conda environment")
-#
-# bashCommand30 = 'conda env create -f configs/conda_env.yaml'
-#
-# os.system(bashCommand30)
-#
-# bashCommand31 = 'conda activate deeplabv2-pytorch'
-#
-# os.system(bashCommand31)
-#
-# print("DeepLab V2 segmentation: download caffemodel pre-trained on ImageNet and 91-class COCO (1GB+)")
-#
-# bashCommand32 = 'sudo bash /home/ubuntu/DeepDeco/src/deeplabv2/scripts/setup_caffemodels.sh'
-#
-# os.system(bashCommand32)
-#
-# print("DeepLab V2 segmentation: Convert the caffemodel to pytorch compatible.")
-#
-# bashCommand33 = 'scd udo python /home/ubuntu/DeepDeco/src/deeplabv2/convert.py --dataset coco'
-#
-# os.system(bashCommand33)
-#
-# print("DeepLab V2 segmentation: now segmenting image....")
-#
-# bashCommand34 = 'sudo python /home/ubuntu/DeepDeco/src/deeplabv2/demo.py single' \
-#                  ' -c /home/ubuntu/DeepDeco/src/deeplabv2/configs/coco.yaml' \
-#                  ' -m /home/ubuntu/DeepDeco/src/deeplabv2/data/models/coco/deeplabv1_resnet101/caffemodel' \
-#                  '/deeplabv1_resnet101-coco.pth' \
-#                  ' -i /home/ubuntu/DeepDeco/jeans.jpg'
-#
-# os.system(bashCommand34)
-#
-# print("DeepLab V2 segmentation: completed")
-
-
-
-# Part 4
 # Fast deep photo style transfer
 
 print("Fast deep photo style transfer inference")
 
-bashCommand40 = "python src/ftdeepphoto/run_fpst.py --in-path " \
-                "office_chair_sketch.jpeg " \
-                "--style-path " \
-                "ikea_timsfors.jpg --checkpoint-path checkpoints/ --out-path " \
-                "output/output_stylized_image2.jpg --deeplab-path " \
-                "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
+currentDT = datetime.now(timezone.utc)
 
+if input_text.speed == 'slow':
+    timer = '3600'  # 60 sec/min * 60 min = 3600 sec
+
+elif input_text.speed == 'medium':
+    timer = '1200'  # 60 sec/min * 20 min = 1200 sec
+
+else:
+    timer = '600'
+
+bashCommand40 = "timeout " + timer + " " \
+                "python src/ftdeepphoto/run_fpst.py --in-path " \
+                + input_text.content + " " \
+                "--style-path " \
+                "data/" + key_for_max_similarity + " --checkpoint-path checkpoints/ --out-path " \
+                "output/output_stylized_image" + currentDT.strftime('%Y_%m_%d_%H_%M_%S') + ".jpg --deeplab-path " \
+                "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
+print(bashCommand40)
+
+start = time.time()
 os.system(bashCommand40)
+end = time.time()
+print("style transfer time: ", end - start, " seconds")
+
+# make a gif
+images = []
+
+for file in os.listdir("."):
+    if file.endswith(".png"):
+        images.append(imageio.imread(file))
+imageio.mimsave("output/output_stylized_image" + currentDT.strftime('%Y_%m_%d_%H_%M_%S') + ".gif", images)
+
+print("gif saved in output/output_stylized_image" + currentDT.strftime('%Y_%m_%d_%H_%M_%S') + ".gif")
 
