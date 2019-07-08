@@ -9,10 +9,7 @@ Generate customizable interior design images with sketches and text description.
 In a terminal, execute the following command:
 
 ```bash
-curl -F "file=@/path/to/designer_sketch.png" \
-    -F "text='ice cold patterned glass'" \
-    -X POST http://deepdeco.club:5000/image \
-    --output flask_output.gif
+curl -F "file=@data/images/chair_sketch.jpeg" -F "text='ice cold patterned glass'" -F "speed='medium'" -X POST http://50.112.137.81:5000/image --output flask_output.gif
 ```
 
 ### Locally
@@ -95,7 +92,12 @@ python src/stylesearch/train.py --weight_path /path/to/your_word2vec_weight.txt
 2. to train style transfer model with your own images, run the following script:
 
 ```bash
-python src/ftdeepphoto/style_fpst.py \
+python src/ftdeepphoto/style_fpst.py # see arguments below
+```
+
+Remember to specify the following arguments when you run the train script.
+
+```bash
         --style /path/to/image_style_to_transfer.jpg \
         --style-seg /path/to/style_image_segmentation_map.jpg \
         --checkpoint-dir directory_to_checkpoint/ \
