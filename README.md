@@ -1,4 +1,4 @@
-# ![img](https://images.app.goo.gl/QL9GFqzRU3bd2rJFA) DeepDeco
+# ![img](https://visualpharm.com/assets/870/Armchair-595b40b65ba036ed117d078e.svg) DeepDeco
 
 Generate customizable interior design images with sketches and text description.
 
@@ -155,6 +155,7 @@ by Ivona Tautkute, Aleksandra Możejko, Wojciech Stokowiec, Tomasz Trzciński,
 	series={Annals of Computer Science and Information Systems}
 }
 ``` 
+4. Image icon reference: https://visualpharm.com/assets/93/Chair-595b40b65ba036ed117d0825.svg
 
 ### Project Structure
 The directory structure of this project is organized in the diagram below: 
