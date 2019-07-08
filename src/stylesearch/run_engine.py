@@ -35,7 +35,7 @@ parser.add_argument('--content', type=str,
 
 input_text = parser.parse_args()
 
-print("this is the text input that run_engine.py parser received: ", input_text.input)
+print("this is the text input that run_engine_webapp.py parser received: ", input_text.input)
 
 # load dict
 with open('src/stylesearch/pickles/img2vec_dict.p', 'rb') as handle:

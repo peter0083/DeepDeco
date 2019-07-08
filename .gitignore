@@ -13,4 +13,4 @@ vgg19weight/
 *.env
 *.tar.gz
 src/stylesearch/pickles/glove.6B/glove.6B.300d.txt
-
+webapp/pickles/glove.6B/glove.6B.300d.txt
