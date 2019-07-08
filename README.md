@@ -23,10 +23,7 @@ curl -F "file=@/path/to/designer_sketch.png" \
 2. run 'inference_aws.py' 
 
 ```bash
-python inference_aws.py \
-       --input "ice cold patterned glass" \
-       --content path/to/designer_sketch.jpg \
-       --speed "medium"
+python inference_aws.py --input "ice cold patterned glass" --content path/to/designer_sketch.jpg --speed "medium"
 ```
 
 ## Setup
