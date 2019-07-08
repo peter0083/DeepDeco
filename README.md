@@ -81,14 +81,23 @@ python src/ftdeepphoto/style_fpst.py \
 
 ## Run Inference
 
-1. setup your `awscli` credentials (required to download the dataset)
-2. run the following python script for style search
+### via API
+
+In a terminal, execute the following command:
 
 ```bash
-python src/stylesearch/run_engine.py --input "text description of the style you want"
+curl -F "file=@/path/to/designer_sketch.png" \
+    -F "text='ice cold patterned glass'" \
+    -X POST http://deepdeco.club:5000/image \
+    --output flask_output.gif
 ```
 
-3. Once the style image is generated, you can apply style transfer onto the sketch using the following script:
+### Locally
+
+**It is recommended to run this inference script on AWS EC2 with GPU for optimal results.**
+
+1. setup your `awscli` credentials (required to download the dataset)
+2. run 'inference_aws.py' 
 
 ```bash
 python src/ftdeepphoto/run_fpst.py --in-path \
