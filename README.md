@@ -1,4 +1,4 @@
-# ![img](https://visualpharm.com/assets/870/Armchair-595b40b65ba036ed117d078e.svg) DeepDeco
+# <img src="https://visualpharm.com/assets/870/Armchair-595b40b65ba036ed117d078e.svg" alt="armchair" width=50 height=50> DeepDeco
 
 Generate customizable interior design images with sketches and text description.
 
