@@ -30,3 +30,14 @@ def test_input_image():
         subprocess.run(run_engine_command)
 
 
+def test_input_train():
+    """
+    This function checks string input type for model weight file path
+    The Vectorizer function should raise a TypeError
+    """
+
+    train_command = ["python", "src/stylesearch/train.py", "--weight_path",
+                          123]
+
+    with pytest.raises(TypeError):
+        subprocess.run(train_command)
