@@ -88,7 +88,7 @@ def inference():
         print("Style transfer mode: ", request.form.get('speed'), ". timer is", str(timer), "sec")
 
         bashCommand40 = ["python", "src/ftdeepphoto/run_fpst.py", "--in-path",
-                         os.path.join(app.config['UPLOAD_FOLDER'], filename), "--style-path", "data",
+                         os.path.join(app.config['UPLOAD_FOLDER'], filename), "--style-path", "data/images/" +
                          style_image_name, "--checkpoint-path", "checkpoints", "--out-path",
                          "output/output_stylized_image" + file_name_stamp + ".jpg", "--deeplab-path",
                          "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz",

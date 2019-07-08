@@ -182,7 +182,9 @@ The directory structure of this project is organized in the diagram below:
 │   │
 │   ├── ftdeepphoto       <- Scripts for Deep Photo Style Transfer (TensorFlow)
 │   │
-│   └── checkpoints       <- Save checkpoints during training and testing.
+│   ├── checkpoints       <- Save checkpoints during training and testing.
+│   │
+│   └── tests             <- Unit tests for pytest.
 │
 └── tox.ini               <- tox file with settings for running tox; see tox.testrun.org
 ```
