@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 
-import os
-from flask import Flask, request
+from flask import Flask, request, send_file
 from werkzeug.utils import secure_filename
-from PIL import Image
 from webapp.run_engine_webapp import StyleSearch
 import time
 from datetime import datetime, timezone
 import os
+import boto3
 import imageio
-
 
 UPLOAD_FOLDER = 'webapp/upload/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
@@ -82,39 +80,38 @@ def hello_world():
 
         print("Style transfer mode: ", request.form.get('speed'), ". timer is", timer, "sec")
 
-        bashCommand40 = "/usr/bin/timeout " + timer + " " \
-                        "python src/ftdeepphoto/run_fpst.py --in-path " \
+        bashCommand40 = "timeout " + timer + " " \
+                                             "python src/ftdeepphoto/run_fpst.py --in-path " \
                         + os.path.join(app.config['UPLOAD_FOLDER'], filename) + " " \
-                        "--style-path " \
-                        "data/" + style_image_name + " --checkpoint-path checkpoints/ --out-path " \
-                        "output/output_stylized_image" \
+                                                                                "--style-path " \
+                                                                                "data/" + style_image_name + " --checkpoint-path checkpoints/ --out-path " \
+                                                                                                             "output/output_stylized_image" \
                         + file_name_stamp + ".jpg --deeplab-path " \
-                        "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz --slow"
+                                            "src/ftdeepphoto/deeplab/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz " \
+                                            "--slow"
 
         print(bashCommand40)
 
         start = time.time()
-        os.system(bashCommand40)
+        # os.system(bashCommand40)
         end = time.time()
-        style_transfer_time =  end - start
+        style_transfer_time = end - start
 
         # make a gif
         images = []
 
-        # for file in os.listdir("."):
-        #     if file.endswith(".png"):
-        #         images.append(imageio.imread(file))
-        # imageio.mimsave("output/output_stylized_image" + file_name_stamp + ".gif", images)
-        #
-        # print("gif saved in output/output_stylized_image" + file_name_stamp + ".gif")
+        os.system("mkdir -p " + "output/output" + file_name_stamp)
+
+        for file in os.listdir("."):
+            if file.endswith(".png"):
+                images.append(imageio.imread(file))
+        imageio.mimsave("output/output" + file_name_stamp + "/output_stylized_image" + file_name_stamp + ".gif", images)
+
+        print("output/output" + file_name_stamp + "/output_stylized_image" + file_name_stamp + ".gif created")
 
         # Part 4
-        # upload output to S3
+        # send file to user
 
-        return "Style image similarity score (out of 1)", similarity_score, "Style search time (sec)", \
-               style_image_name, "Style transfer time (sec)", style_transfer_time
+        final_output_img = "output/output" + file_name_stamp + "/output_stylized_image" + file_name_stamp + ".gif"
 
-
-
-
-
+        return send_file(final_output_img)
