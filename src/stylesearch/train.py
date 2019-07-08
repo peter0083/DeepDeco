@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 import csv
 from argparse import ArgumentParser
+import os
 
 # arguments for this script
 parser = ArgumentParser()
@@ -30,11 +31,15 @@ words_weight = parser.parse_args()
 
 # load pre-trained glove to words variable
 if words_weight.weight_path is None:
-    words_weight = pd.read_csv('src/stylesearch/pickles/glove.6B/glove.6B.300d.txt',
+    try:
+        words_weight = pd.read_csv('src/stylesearch/pickles/glove.6B/glove.6B.300d.txt',
                         sep=" ",
                         index_col=0,
                         header=None,
                         quoting=csv.QUOTE_NONE)
+    except FileNotFoundError:
+        glove_file_path = (os.path.dirname(__file__)) + "/pickles/glove.6B/glove.6B.300d.txt"
+        words_weight = pd.read_csv(glove_file_path, sep=" ", index_col=0, header=None, quoting=csv.QUOTE_NONE)
 
 
 class Vectorizer:
@@ -105,7 +110,12 @@ class Vectorizer:
 
 
 # load img2text dictionary
-img_to_text_pickle = open('src/stylesearch/pickles/img_to_text.p', 'rb')
+try:
+    img_to_text_pickle = open('src/stylesearch/pickles/img_to_text.p', 'rb')
+except FileNotFoundError:
+    img_to_text_pickle_file_path = (os.path.dirname(__file__)) + "/pickles/img_to_text.p"
+    img_to_text_pickle = open(img_to_text_pickle_file_path, 'rb')
+
 img2text_dict = pickle.load(img_to_text_pickle)
 img_to_text_pickle.close()
 
