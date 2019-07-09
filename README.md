@@ -8,15 +8,8 @@ Generate customizable interior design images with sketches and text description.
 
 In a terminal, execute the following command:
 
-```python
-
-
-
-curl -F "file=@data/images/chair_sketch.jpeg" -F "text='ice cold patterned glass'" -F "speed='medium'" -X POST http://50.112.137.81:5000/image --output flask_output.gif
-
-
-
-
+```bash
+curl -F "file=@data/images/chair_sketch.jpeg" -F "text='ice cold patterned glass'" -X POST http://50.112.137.81:5000/image --output flask_output.gif
 ```
 
 ### Locally
