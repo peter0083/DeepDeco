@@ -1,8 +1,22 @@
 # <img src="https://visualpharm.com/assets/870/Armchair-595b40b65ba036ed117d078e.svg" alt="armchair" width=50 height=50> DeepDeco
 
-Generate customizable interior design images with sketches and text description.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Run Inference
+DeepDeco generates customizable interior design images with sketches and text description. It uses neural style transfer and Word2Vec style search.
+
+Resources: [slides](http://http://bit.ly/deepdecoppt)
+
+
+## Setup
+
+Clone repository and update python path
+
+```
+git clone https://github.com/peter0083/DeepDeco.git
+cd DeepDeco
+```
+
+## Simple Usage
 
 ### via API
 
@@ -12,7 +26,9 @@ In a terminal, execute the following command:
 curl -F "file=@data/images/chair_sketch.jpeg" -F "text='ice cold patterned glass'" -X POST http://50.112.137.81:5000/image --output flask_output.gif
 ```
 
-### Locally
+## Advanced Usage
+
+### local inference 
 
 **It is recommended to run this inference script on AWS EC2 with GPU for optimal result.**
 
@@ -23,14 +39,13 @@ curl -F "file=@data/images/chair_sketch.jpeg" -F "text='ice cold patterned glass
 python inference_aws.py --input "ice cold patterned glass" --content path/to/designer_sketch.jpg --speed "medium"
 ```
 
-## Setup
+## Results
 
-Clone repository and update python path
+![result 1](output/Peter_Lin_FinalDemo.jpg)
 
-```
-git clone https://github.com/peter0083/DeepDeco.git
-cd DeepDeco
-```
+![result 2](output/Peter_Lin_FinalDemo1.jpg)
+
+![result 3](output/Peter_Lin_FinalDemo2.jpg)
 
 ## Dependencies
 
