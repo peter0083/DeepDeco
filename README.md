@@ -171,7 +171,7 @@ by Ivona Tautkute, Aleksandra Możejko, Wojciech Stokowiec, Tomasz Trzciński,
 ``` 
 4. Image icon reference: https://visualpharm.com/assets/93/Chair-595b40b65ba036ed117d0825.svg
 
-### Project Structure
+## Project Structure
 The directory structure of this project is organized in the diagram below: 
 
 ```
@@ -204,3 +204,6 @@ The directory structure of this project is organized in the diagram below:
 └── tox.ini               <- tox file with settings for running tox; see tox.testrun.org
 ```
 
+## Contact
+
+Peter Lin: peter.tingyao@gmail.com
