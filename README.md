@@ -23,7 +23,7 @@ cd DeepDeco
 In a terminal, execute the following command:
 
 ```bash
-curl -F "file=@data/images/chair_sketch.jpeg" -F "text='ice cold patterned glass'" -X POST http://50.112.137.81:5000/image --output flask_output.gif
+curl -F "file=@data/images/chair_sketch.jpeg" -F "text='ice cold patterned glass'" -X POST http://deepdeco.club/image --output flask_output.gif
 ```
 
 ## Advanced Usage
