@@ -1,10 +1,6 @@
 # <img src="https://visualpharm.com/assets/870/Armchair-595b40b65ba036ed117d078e.svg" alt="armchair" width=50 height=50> DeepDeco
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) 
-
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/peter0083/DeepDeco/issues/)
-
-[![Generic badge](https://img.shields.io/badge/AWS_API-closed-yellow.svg)](https://shields.io/)
+[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/peter0083/DeepDeco/issues/) [![AWS status](https://img.shields.io/badge/AWS_API-closed-yellow.svg)](https://shields.io/)
 
 
 ## Motivation
