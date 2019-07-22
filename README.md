@@ -1,6 +1,17 @@
 # <img src="https://visualpharm.com/assets/870/Armchair-595b40b65ba036ed117d078e.svg" alt="armchair" width=50 height=50> DeepDeco
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) 
+
+[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/peter0083/DeepDeco/issues/)
+
+[![Generic badge](https://img.shields.io/badge/AWS_API-closed-yellow.svg)](https://shields.io/)
+
+
+## Motivation
+
+Interior design is a multi-billion-dollar industry. Interior designers spend a significant amount of time during the initial consultation phase with their clients because clients often have difficulties visualizing the designers' sketches.
+One AI solution to this problem to this problem is to apply neural style transfer that transfer desired pattern onto an existing photo. Neural style transfer alone, however, does not solve interior designer's problem.
+Neural style transfer requires a style image that contains the desired pattern. For interior design, finding the right style images with clients will be also time-consuming.
 
 DeepDeco generates customizable interior design images with sketches and text description. It uses neural style transfer and Word2Vec style search.
 
@@ -49,6 +60,8 @@ python inference_aws.py --input "ice cold patterned glass" --content path/to/des
 
 ## Dependencies
 
+* Python 3.6
+
 *Deep Photo Style Transfer*
 
 * [Tensorflow](https://www.tensorflow.org/)
@@ -74,15 +87,21 @@ pip install -r requirements.txt
 The VGG-19 model of tensorflow is adopted from [VGG Tensorflow](https://github.com/machrisaa/tensorflow-vgg) with few 
 modifications on the class interface. The VGG-19 model weights is stored as .npy file 
 and could be download from [Google Drive](https://drive.google.com/file/d/0BxvKyd83BJjYY01PYi1XQjB5R0E/view?usp=sharing) or [BaiduYun Pan](https://pan.baidu.com/s/1o9weflK). 
-After downloading, copy the weight file to the **./project/vgg19** directory
+After downloading, copy the weight file to the **/src/ftdeepphoto/deep-photo-styletransfer-tf/vgg19/** directory
+
+![filepath vgg19](output/filepath_vgg19.png)
 
 ### Download the Deep Lab V3 weights
 Download DeepLab V3 weights from [DeepLabV3 Tensorflow](http://download.tensorflow.org/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz).
 After downloading the file, copy the weight file to **src/ftdeepphoto/deeplab/models/** directory
 
+![filepath deeplab](output/filepath_deeplab.png)
+
 ### Download the GloVe 6B 300d weights
 Download GloVe 6B 300d weights from [Stanford NLP group](http://nlp.stanford.edu/data/glove.6B.zip). 
 Unzip the zip file and move `glove.6B.300d.txt` to the **src/stylesearch/pickles/glove.6B/** directory.
+
+![filepath glove](output/filepath_glove.png)
 
 ## Build Environment
 
