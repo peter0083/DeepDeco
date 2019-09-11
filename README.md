@@ -1,4 +1,4 @@
-# <img src="https://visualpharm.com/assets/870/Armchair-595b40b65ba036ed117d078e.svg" alt="armchair" width=50 height=50> DeepDeco
+# <img src="data/images/lounge.png" alt="armchair" width=50 height=50> DeepDeco
 
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/peter0083/DeepDeco/issues/) [![AWS status](https://img.shields.io/badge/AWS_API-closed-yellow.svg)](https://shields.io/)
 
@@ -184,7 +184,7 @@ by Ivona Tautkute, Aleksandra Możejko, Wojciech Stokowiec, Tomasz Trzciński,
 	series={Annals of Computer Science and Information Systems}
 }
 ``` 
-4. Image icon reference: https://visualpharm.com/assets/93/Chair-595b40b65ba036ed117d0825.svg
+4. Image icon reference: Icon made by [Freepik](https://www.freepik.com/home) from www.flaticon.com
 
 ## Project Structure
 The directory structure of this project is organized in the diagram below: 
