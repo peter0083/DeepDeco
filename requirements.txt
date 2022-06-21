@@ -6,7 +6,7 @@ gcc7
 pycuda
 ffmpeg
 moviepy
-numpy==1.16.1
+numpy==1.22.0
 ####### numpy=1.16.1 has allow_pickle=True as default
 ####### docker
 click
